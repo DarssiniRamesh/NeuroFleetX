@@ -1,9 +1,5 @@
-"use client"
-
-import React, { useEffect, useState, useMemo } from "react"
-import { collection, onSnapshot, query, where } from "firebase/firestore"
-import { db } from "../../firebase"
-import { PieChart, Pie, Cell, Label, Tooltip, Legend } from "recharts"
+import React, { useMemo, useState } from "react";
+import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
 import {
   Card,
@@ -12,121 +8,145 @@ import {
   CardTitle,
   CardDescription,
   CardFooter,
-} from "@/components/ui/card"
-import { TrendingUp } from "lucide-react"
+} from "@/components/ui/card";
 
-const DriverDashboard = () => {
-  const [bookings, setBookings] = useState([])
-  const [engineStatus, setEngineStatus] = useState("Good")
-  const driverName = localStorage.getItem("name")
-  const uid = localStorage.getItem("uid")
+/**
+ * Driver dashboard.
+ * Note: Firebase was referenced in earlier versions but no Firebase config exists in this repo.
+ * This dashboard uses placeholder booking data so the SPA runs cleanly.
+ *
+ * PUBLIC_INTERFACE
+ */
+export default function DriverDashboard() {
+  const driverName =
+    JSON.parse(localStorage.getItem("nf_user") || "null")?.name || "Driver";
 
-  useEffect(() => {
-    if (!uid) return
+  const [bookings] = useState(() => [
+    {
+      id: "B-1001",
+      customerName: "Amit Verma",
+      pickupLocation: "Central Park",
+      dropLocation: "Riverside",
+      status: "pending",
+    },
+    {
+      id: "B-1002",
+      customerName: "Neha Sharma",
+      pickupLocation: "Warehouse",
+      dropLocation: "Downtown",
+      status: "completed",
+    },
+    {
+      id: "B-1003",
+      customerName: "Sara Ali",
+      pickupLocation: "Main Street",
+      dropLocation: "Airport",
+      status: "in-progress",
+    },
+  ]);
 
-    const q = query(collection(db, "bookings"), where("driverId", "==", uid))
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-      setBookings(list)
-    })
+  const [engineStatus] = useState("Good");
 
-    const vehicleQ = query(
-      collection(db, "vehicles"),
-      where("assignedDriver", "==", uid)
-    )
-    const unsubscribeVehicle = onSnapshot(vehicleQ, (snapshot) => {
-      if (!snapshot.empty) {
-        setEngineStatus(snapshot.docs[0].data().engineStatus || "Good")
-      }
-    })
+  const currentBooking =
+    bookings.find((b) => b.status === "in-progress") || null;
 
-    return () => {
-      unsubscribe()
-      unsubscribeVehicle()
-    }
-  }, [uid])
+  const pieData = useMemo(
+    () => [
+      { name: "Pending", value: bookings.filter((b) => b.status === "pending").length },
+      { name: "Completed", value: bookings.filter((b) => b.status === "completed").length },
+      { name: "In-Progress", value: bookings.filter((b) => b.status === "in-progress").length },
+      { name: "Cancelled", value: bookings.filter((b) => b.status === "cancelled").length },
+    ],
+    [bookings]
+  );
 
-  const currentBooking = bookings.find((b) => b.status === "in-progress") || null
-
-  // --- Pie-chart Data Memoized ---
-  const pieData = useMemo(() => [
-    { name: "Pending", value: bookings.filter((b) => b.status === "pending").length },
-    { name: "Completed", value: bookings.filter((b) => b.status === "completed").length },
-    { name: "In-Progress", value: bookings.filter((b) => b.status === "in-progress").length },
-    { name: "Cancelled", value: bookings.filter((b) => b.status === "cancelled").length },
-  ], [bookings])
-
-  const totalBookings = useMemo(
-    () => pieData.reduce((acc, b) => acc + b.value, 0),
-    [pieData]
-  )
-
-  // --- Colors (Blue Shades) ---
-  const COLORS = ["#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe"]
+  const COLORS = ["#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe"];
 
   return (
-    <div className="text-white">
+    <div>
       <h1 className="text-4xl font-bold">Welcome, {driverName}</h1>
-      <p className="mt-2 text-gray-400">
+      <p className="mt-2 text-muted-foreground">
         Here's your overview for today: bookings, routes, and vehicle health.
       </p>
 
-      {/* Quick Stats */}
       <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-4">
-        <div className="bg-[#141414] p-6 rounded-xl border border-gray-800 shadow hover:scale-105 transition">
-          <h2 className="text-lg text-gray-400">Upcoming Bookings</h2>
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+          <h2 className="text-lg text-muted-foreground">Upcoming Bookings</h2>
           <p className="text-3xl font-bold">{pieData[0].value}</p>
         </div>
 
-        <div className="bg-[#141414] p-6 rounded-xl border border-gray-800 shadow hover:scale-105 transition">
-          <h2 className="text-lg text-gray-400">Engine Status</h2>
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+          <h2 className="text-lg text-muted-foreground">Engine Status</h2>
           <p className="text-3xl font-bold">{engineStatus}</p>
         </div>
 
-        <div className="bg-[#141414] p-6 rounded-xl border border-gray-800 shadow hover:scale-105 transition">
-          <h2 className="text-lg text-gray-400">Completed Trips</h2>
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+          <h2 className="text-lg text-muted-foreground">Completed Trips</h2>
           <p className="text-3xl font-bold">{pieData[1].value}</p>
         </div>
 
-        <div className="bg-[#141414] p-6 rounded-xl border border-gray-800 shadow hover:scale-105 transition">
-          <h2 className="text-lg text-gray-400">Current Booking</h2>
-          <p className="text-3xl font-bold">{currentBooking ? currentBooking.customerName : "None"}</p>
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+          <h2 className="text-lg text-muted-foreground">Current Booking</h2>
+          <p className="text-3xl font-bold">
+            {currentBooking ? currentBooking.customerName : "None"}
+          </p>
         </div>
       </div>
 
-      {/* Current Booking */}
       {currentBooking && (
-        <div className="mt-8 bg-[#1e1e1e] p-6 rounded-xl border border-gray-700 shadow">
-          <h2 className="mb-4 text-2xl font-bold text-white">Current Booking</h2>
-          <p><span className="font-semibold text-gray-300">Customer:</span> {currentBooking.customerName}</p>
-          <p><span className="font-semibold text-gray-300">Pickup:</span> {currentBooking.pickupLocation}</p>
-          <p><span className="font-semibold text-gray-300">Drop:</span> {currentBooking.dropLocation}</p>
-          <p className="mt-2">
-            <span className="font-semibold text-gray-300">Status:</span>{" "}
-            <span className="px-2 py-1 text-sm text-gray-200 bg-gray-800 rounded-md">{currentBooking.status}</span>
+        <div className="mt-8 bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+          <h2 className="mb-4 text-2xl font-bold">Current Booking</h2>
+          <p className="text-muted-foreground">
+            <span className="font-semibold">Customer:</span>{" "}
+            {currentBooking.customerName}
+          </p>
+          <p className="text-muted-foreground">
+            <span className="font-semibold">Pickup:</span>{" "}
+            {currentBooking.pickupLocation}
+          </p>
+          <p className="text-muted-foreground">
+            <span className="font-semibold">Drop:</span>{" "}
+            {currentBooking.dropLocation}
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            <span className="font-semibold">Status:</span>{" "}
+            <span className="px-2 py-1 text-sm bg-muted rounded-md">
+              {currentBooking.status}
+            </span>
           </p>
         </div>
       )}
 
-      {/* All Bookings + Pie Donut Chart */}
       <div className="mt-10">
         <h2 className="mb-4 text-2xl font-bold">All Bookings</h2>
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-
-          {/* LEFT — BOOKINGS */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
           <div>
             {bookings.length === 0 ? (
-              <p className="text-gray-400">No bookings assigned yet.</p>
+              <p className="text-muted-foreground">No bookings assigned yet.</p>
             ) : (
               <div className="space-y-4">
                 {bookings.map((b) => (
-                  <div key={b.id} className="p-4 rounded-xl border border-gray-700 bg-[#1a1a1a] shadow">
-                    <p><span className="font-semibold text-gray-300">Customer:</span> {b.customerName}</p>
-                    <p><span className="font-semibold text-gray-300">Pickup:</span> {b.pickupLocation}</p>
-                    <p><span className="font-semibold text-gray-300">Drop:</span> {b.dropLocation}</p>
-                    <p className="mt-2">
-                      <span className="font-semibold text-gray-300">Status:</span>{" "}
-                      <span className="px-2 py-1 text-sm text-gray-200 bg-gray-800 rounded-md">{b.status}</span>
+                  <div
+                    key={b.id}
+                    className="p-4 rounded-xl border border-border/40 bg-card shadow-sm"
+                  >
+                    <p className="text-muted-foreground">
+                      <span className="font-semibold">Customer:</span>{" "}
+                      {b.customerName}
+                    </p>
+                    <p className="text-muted-foreground">
+                      <span className="font-semibold">Pickup:</span>{" "}
+                      {b.pickupLocation}
+                    </p>
+                    <p className="text-muted-foreground">
+                      <span className="font-semibold">Drop:</span>{" "}
+                      {b.dropLocation}
+                    </p>
+                    <p className="mt-2 text-muted-foreground">
+                      <span className="font-semibold">Status:</span>{" "}
+                      <span className="px-2 py-1 text-sm bg-muted rounded-md">
+                        {b.status}
+                      </span>
                     </p>
                   </div>
                 ))}
@@ -134,14 +154,13 @@ const DriverDashboard = () => {
             )}
           </div>
 
-          {/* RIGHT — PIE DONUT CHART */}
-          <Card className="bg-[#1a1a1a] border border-gray-800 shadow">
+          <Card className="bg-card border border-border/40 shadow-sm">
             <CardHeader className="items-center pb-0">
-              <CardTitle className="text-white">Booking Status</CardTitle>
-              <CardDescription className="text-gray-400">Overview</CardDescription>
+              <CardTitle>Booking Status</CardTitle>
+              <CardDescription>Overview</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 pb-0">
-              <div className="mx-auto aspect-square max-h-[300px]">
+              <div className="mx-auto aspect-square max-h-[320px]">
                 <PieChart>
                   <Pie
                     data={pieData}
@@ -150,39 +169,25 @@ const DriverDashboard = () => {
                     innerRadius={60}
                     outerRadius={100}
                     strokeWidth={5}
-                    label={({ name, cx, cy, midAngle, outerRadius, percent, index }) => (
-                      <text
-                        x={cx}
-                        y={outerRadius + 20} // label below the slice
-                        textAnchor="middle"
-                        fill="#ffffff"
-                        fontSize={12}
-                      >
-                        {name} ({pieData[index].value})
-                      </text>
-                    )}
                   >
-                    {pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    {pieData.map((_, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
                     ))}
                   </Pie>
-                  <Tooltip
-                    contentStyle={{ backgroundColor: "#1e1e1e", border: "none", color: "#fff" }}
-                    itemStyle={{ color: "#fff" }}
-                  />
+                  <Tooltip />
                   <Legend verticalAlign="bottom" align="center" iconType="circle" />
                 </PieChart>
               </div>
             </CardContent>
-            <CardFooter className="flex-col gap-2 text-sm text-gray-400">
+            <CardFooter className="flex-col gap-2 text-sm text-muted-foreground">
               Showing total bookings by status
             </CardFooter>
           </Card>
-
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-export default DriverDashboard

@@ -1,54 +1,60 @@
 import React, { useEffect, useState } from "react";
-import DriverLayout from "./DriverLayout";
-import { collection, query, where, onSnapshot } from "firebase/firestore";
-import { db } from "../../firebase";
 
+/**
+ * EngineDetails page (driver).
+ * Note: Previous version referenced Firebase + DriverLayout (not present in repo).
+ * This keeps the page working with placeholder data (or can be connected to backend later).
+ */
 const DriverEngine = () => {
   const [vehicle, setVehicle] = useState(null);
 
-  const uid = localStorage.getItem("uid");
-
-  // Fetch vehicle assigned to this driver (assuming bookings/vehicles have driverId)
   useEffect(() => {
-    const q = query(collection(db, "vehicles"), where("assignedDriver", "==", uid));
-
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const list = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
-      setVehicle(list[0] || null); // Assuming one vehicle per driver
+    // If/when backend has an endpoint for assigned vehicle telemetry, wire it here.
+    // For now, display placeholder data.
+    setVehicle({
+      number: "NF-101",
+      model: "Swift",
+      type: "Hatchback",
+      health: 82,
+      engineStatus: "Good",
+      lastTelemetry: Date.now(),
+      speed: 42,
+      location: "Downtown",
     });
-
-    return () => unsubscribe();
-  }, [uid]);
+  }, []);
 
   return (
-    <>
-      <h1 className="text-3xl font-bold text-white">Vehicle Engine & Telemetry</h1>
-      <p className="mt-2 opacity-70">Monitor your assigned vehicle in real-time.</p>
+    <div>
+      <h1 className="text-3xl font-bold">Vehicle Engine & Telemetry</h1>
+      <p className="mt-2 text-muted-foreground">
+        Monitor your assigned vehicle in real-time.
+      </p>
 
       {vehicle ? (
-        <div className="mt-6 p-6 bg-[#141414] rounded-xl border border-gray-800 text-white">
-          <h2 className="text-2xl text-blue-400">{vehicle.number}</h2>
-          <p>Model: {vehicle.model}</p>
-          <p>Type: {vehicle.type}</p>
-          <p>Health: {vehicle.health}%</p>
-          <p>Engine Status: {vehicle.engineStatus}</p>
-          <p>
+        <div className="mt-6 p-6 rounded-xl border border-border/40 bg-card">
+          <h2 className="text-2xl text-primary">{vehicle.number}</h2>
+          <p className="text-muted-foreground">Model: {vehicle.model}</p>
+          <p className="text-muted-foreground">Type: {vehicle.type}</p>
+          <p className="text-muted-foreground">Health: {vehicle.health}%</p>
+          <p className="text-muted-foreground">
+            Engine Status: {vehicle.engineStatus}
+          </p>
+          <p className="text-muted-foreground">
             Last Telemetry:{" "}
             {vehicle.lastTelemetry
               ? new Date(vehicle.lastTelemetry).toLocaleString()
               : "N/A"}
           </p>
 
-          {/* Mock speed and location */}
-          <p>Speed: {vehicle.speed || 0} km/h</p>
-          <p>Location: {vehicle.location || "N/A"}</p>
+          <p className="text-muted-foreground">Speed: {vehicle.speed || 0} km/h</p>
+          <p className="text-muted-foreground">
+            Location: {vehicle.location || "N/A"}
+          </p>
         </div>
       ) : (
-        <p className="mt-6 text-white opacity-70">
-          No vehicle assigned yet.
-        </p>
+        <p className="mt-6 text-muted-foreground">No vehicle assigned yet.</p>
       )}
-    </>
+    </div>
   );
 };
 

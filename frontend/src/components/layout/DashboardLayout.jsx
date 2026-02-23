@@ -16,7 +16,7 @@ export default function DashboardLayout({ role = "ADMIN" }) {
       // redirect to login if not present
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("nf_user");
