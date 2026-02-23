@@ -39,13 +39,25 @@ export default defineConfig({
     testIdAttribute: 'data-testid',
   },
 
-  // Start the Vite dev server for E2E (Playwright will wait for it).
-  webServer: {
-    command: 'npm run dev -- --host 0.0.0.0 --port 3000',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
-  },
+  // Start required servers for E2E (Playwright will wait for them).
+  // Frontend depends on backend at http://localhost:3001 (see src/api/axios.js).
+  webServer: [
+    {
+      // Spring Boot backend
+      // Note: use mvnw to avoid requiring a globally-installed Maven.
+      command: 'cd ../backend/neurofleetx && ./mvnw -q spring-boot:run',
+      url: 'http://localhost:3001',
+      reuseExistingServer: !process.env.CI,
+      timeout: 180 * 1000,
+    },
+    {
+      // Vite frontend
+      command: 'npm run dev -- --host 0.0.0.0 --port 3000',
+      url: 'http://localhost:3000',
+      reuseExistingServer: !process.env.CI,
+      timeout: 120 * 1000,
+    },
+  ],
 
   projects: [
     {

@@ -16,6 +16,8 @@ export async function registerViaUI(page: Page, opts: { role: Role; name?: strin
   const password = opts.password ?? 'Passw0rd!123';
   const name = opts.name ?? (opts.role === 'ADMIN' ? 'E2E Admin' : 'E2E Driver');
 
+  const expectedPath = opts.role === 'ADMIN' ? '/admin/dashboard' : '/driver/dashboard';
+
   await page.goto('/register');
   await expect(page.getByTestId('auth-register-title')).toBeVisible();
 
@@ -26,7 +28,9 @@ export async function registerViaUI(page: Page, opts: { role: Role; name?: strin
   await page.getByTestId('register-submit').click();
 
   // Post-register, the app should route to role dashboard.
-  await expect(page.getByTestId('dashboard-layout')).toBeVisible();
+  // Waiting on URL is typically more robust than only waiting on a single element.
+  await expect(page).toHaveURL(new RegExp(`${expectedPath.replaceAll('/', '\\/')}$`), { timeout: 20_000 });
+  await expect(page.getByTestId('dashboard-layout')).toBeVisible({ timeout: 20_000 });
 
   return { email, password, name, role: opts.role };
 }
@@ -36,6 +40,8 @@ export async function registerViaUI(page: Page, opts: { role: Role; name?: strin
  */
 export async function loginViaUI(page: Page, opts: { email: string; password: string; role: Role }) {
   /** Log in via UI and verify we land in the correct role dashboard. */
+  const expectedPath = opts.role === 'ADMIN' ? '/admin/dashboard' : '/driver/dashboard';
+
   await page.goto('/login');
   await expect(page.getByTestId('auth-login-title')).toBeVisible();
 
@@ -43,8 +49,9 @@ export async function loginViaUI(page: Page, opts: { email: string; password: st
   await page.getByTestId('login-password').fill(opts.password);
   await page.getByTestId('login-submit').click();
 
-  await expect(page.getByTestId('dashboard-layout')).toBeVisible();
-  await expect(page.getByTestId('sidebar')).toBeVisible();
+  await expect(page).toHaveURL(new RegExp(`${expectedPath.replaceAll('/', '\\/')}$`), { timeout: 20_000 });
+  await expect(page.getByTestId('dashboard-layout')).toBeVisible({ timeout: 20_000 });
+  await expect(page.getByTestId('sidebar')).toBeVisible({ timeout: 20_000 });
 
   // Role-specific nav item should exist.
   if (opts.role === 'ADMIN') {
