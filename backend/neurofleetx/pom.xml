@@ -52,6 +52,12 @@
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!-- Provides /actuator/health which Playwright uses as a reliable readiness endpoint -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-devtools</artifactId>

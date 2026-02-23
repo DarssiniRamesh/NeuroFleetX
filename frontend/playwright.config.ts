@@ -69,24 +69,30 @@ export default defineConfig({
   // - force frontend to port 3000
   // - bind Vite to 127.0.0.1 so the readiness URL (localhost) is consistent in CI
   // - pipe stdout/stderr so CI logs show startup failures instead of "hanging"
+  //
+  // Environment variables:
+  // - PLAYWRIGHT_BACKEND_PORT (default 3001)
+  // - PLAYWRIGHT_FRONTEND_PORT (default 3000)
+  const BACKEND_PORT = Number(process.env.PLAYWRIGHT_BACKEND_PORT || 3001);
+  const FRONTEND_PORT = Number(process.env.PLAYWRIGHT_FRONTEND_PORT || 3000);
+  const HOST = '127.0.0.1';
   webServer: [
     {
-      // Spring Boot backend (force port 3001)
+      // Spring Boot backend (force port)
       // Note: use mvnw to avoid requiring a globally-installed Maven.
       command:
-        'cd ../backend/neurofleetx && ./mvnw -q spring-boot:run -Dspring-boot.run.arguments=--server.port=3001',
-      // Use a deterministic readiness endpoint (actuator health)
-      url: 'http://127.0.0.1:3001/actuator/health',
+        `cd ../backend/neurofleetx && ./mvnw -q spring-boot:run -Dspring-boot.run.arguments=--server.port=${BACKEND_PORT}`,
+      // Deterministic readiness endpoint (Actuator health)
+      url: `http://${HOST}:${BACKEND_PORT}/actuator/health`,
       reuseExistingServer: !process.env.CI,
       timeout: 240 * 1000,
       stdout: 'pipe',
       stderr: 'pipe',
     },
     {
-      // Vite frontend (force port 3000)
-      // Use 127.0.0.1 to avoid interface binding surprises in CI.
-      command: 'npm run dev -- --host 127.0.0.1 --port 3000 --strictPort',
-      url: 'http://127.0.0.1:3000',
+      // Vite frontend (force port)
+      command: `npm run dev -- --host ${HOST} --port ${FRONTEND_PORT} --strictPort`,
+      url: `http://${HOST}:${FRONTEND_PORT}`,
       reuseExistingServer: !process.env.CI,
       timeout: 180 * 1000,
       stdout: 'pipe',
