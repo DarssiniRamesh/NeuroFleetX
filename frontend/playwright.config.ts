@@ -41,21 +41,34 @@ export default defineConfig({
 
   // Start required servers for E2E (Playwright will wait for them).
   // Frontend depends on backend at http://localhost:3001 (see src/api/axios.js).
+  //
+  // We intentionally:
+  // - force backend to port 3001
+  // - force frontend to port 3000
+  // - bind Vite to 127.0.0.1 so the readiness URL (localhost) is consistent in CI
+  // - pipe stdout/stderr so CI logs show startup failures instead of "hanging"
   webServer: [
     {
-      // Spring Boot backend
+      // Spring Boot backend (force port 3001)
       // Note: use mvnw to avoid requiring a globally-installed Maven.
-      command: 'cd ../backend/neurofleetx && ./mvnw -q spring-boot:run',
-      url: 'http://localhost:3001',
+      command:
+        'cd ../backend/neurofleetx && ./mvnw -q spring-boot:run -Dspring-boot.run.arguments=--server.port=3001',
+      // Use a deterministic readiness endpoint (actuator health)
+      url: 'http://127.0.0.1:3001/actuator/health',
       reuseExistingServer: !process.env.CI,
-      timeout: 180 * 1000,
+      timeout: 240 * 1000,
+      stdout: 'pipe',
+      stderr: 'pipe',
     },
     {
-      // Vite frontend
-      command: 'npm run dev -- --host 0.0.0.0 --port 3000',
-      url: 'http://localhost:3000',
+      // Vite frontend (force port 3000)
+      // Use 127.0.0.1 to avoid interface binding surprises in CI.
+      command: 'npm run dev -- --host 127.0.0.1 --port 3000 --strictPort',
+      url: 'http://127.0.0.1:3000',
       reuseExistingServer: !process.env.CI,
-      timeout: 120 * 1000,
+      timeout: 180 * 1000,
+      stdout: 'pipe',
+      stderr: 'pipe',
     },
   ],
 
