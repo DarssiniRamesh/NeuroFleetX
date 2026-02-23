@@ -1,11 +1,18 @@
 import { defineConfig, devices } from '@playwright/test';
 
+// Environment variables:
+// - PLAYWRIGHT_BACKEND_PORT (default 3001)
+// - PLAYWRIGHT_FRONTEND_PORT (default 3000)
+const BACKEND_PORT = Number(process.env.PLAYWRIGHT_BACKEND_PORT || 3001);
+const FRONTEND_PORT = Number(process.env.PLAYWRIGHT_FRONTEND_PORT || 3000);
+const HOST = '127.0.0.1';
+
 /**
  * Playwright E2E configuration for NeuroFleetX frontend (React/Vite).
  *
  * Key requirement for CI environments:
  * - Use a system-installed Chromium (via OS packages) instead of downloading Playwright browsers.
- * - Generate an HTML report (single-file in CI) that CI can archive easily.
+ * - Generate an HTML report that CI can archive easily.
  *
  * Environment variables:
  * - PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: absolute path to Chromium/Chrome executable.
@@ -19,37 +26,19 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 2 : undefined,
 
-  /**
-   * Global timeouts (determinism / no hangs):
-   * - timeout: per-test maximum runtime.
-   * - expect.timeout: default expect() timeout (can still be overridden per expect).
-   *
-   * Keep these reasonably strict so we fail fast when the app is stuck, but allow
-   * enough time for CI startup and first navigation.
-   */
   timeout: process.env.CI ? 90_000 : 60_000,
   expect: {
     timeout: process.env.CI ? 15_000 : 10_000,
   },
 
-  // In CI, emit a single-file HTML report for easy artifact upload.
   reporter: process.env.CI
     ? [['github'], ['html', { open: 'never', outputFolder: 'playwright-report' }]]
     : [['list'], ['html', { open: 'on-failure', outputFolder: 'playwright-report' }]],
 
-  // Single-file HTML (inline all assets) is supported by Playwright's HTML reporter.
-  // We enable it in CI to make the report portable.
-  // Ref: https://playwright.dev/docs/test-reporters#html-reporter
   reportSlowTests: { max: 10, threshold: 30_000 },
 
   use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-
-    /**
-     * Avoid indefinite waiting on actions/navigation:
-     * - actionTimeout applies to click/fill/etc.
-     * - navigationTimeout applies to goto/waitForURL/etc.
-     */
     actionTimeout: process.env.CI ? 15_000 : 10_000,
     navigationTimeout: process.env.CI ? 30_000 : 20_000,
 
@@ -57,32 +46,13 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
 
-    // We add data-testid across the app; this makes tests resilient.
     testIdAttribute: 'data-testid',
   },
 
-  // Start required servers for E2E (Playwright will wait for them).
-  // Frontend depends on backend at http://localhost:3001 (see src/api/axios.js).
-  //
-  // We intentionally:
-  // - force backend to port 3001
-  // - force frontend to port 3000
-  // - bind Vite to 127.0.0.1 so the readiness URL (localhost) is consistent in CI
-  // - pipe stdout/stderr so CI logs show startup failures instead of "hanging"
-  //
-  // Environment variables:
-  // - PLAYWRIGHT_BACKEND_PORT (default 3001)
-  // - PLAYWRIGHT_FRONTEND_PORT (default 3000)
-  const BACKEND_PORT = Number(process.env.PLAYWRIGHT_BACKEND_PORT || 3001);
-  const FRONTEND_PORT = Number(process.env.PLAYWRIGHT_FRONTEND_PORT || 3000);
-  const HOST = '127.0.0.1';
   webServer: [
     {
-      // Spring Boot backend (force port)
-      // Note: use mvnw to avoid requiring a globally-installed Maven.
       command:
         `cd ../backend/neurofleetx && ./mvnw -q spring-boot:run -Dspring-boot.run.arguments=--server.port=${BACKEND_PORT}`,
-      // Deterministic readiness endpoint (Actuator health)
       url: `http://${HOST}:${BACKEND_PORT}/actuator/health`,
       reuseExistingServer: !process.env.CI,
       timeout: 240 * 1000,
@@ -90,7 +60,6 @@ export default defineConfig({
       stderr: 'pipe',
     },
     {
-      // Vite frontend (force port)
       command: `npm run dev -- --host ${HOST} --port ${FRONTEND_PORT} --strictPort`,
       url: `http://${HOST}:${FRONTEND_PORT}`,
       reuseExistingServer: !process.env.CI,
@@ -105,13 +74,6 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-
-        // Point Playwright at a system Chromium/Chrome binary to avoid Playwright's browser downloads.
-        // When this is set, the 'chromium' browser project will launch this executable instead.
-        //
-        // NOTE: The environment must install Chromium via OS packages and set:
-        //   PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium
-        // (path may vary by distro)
         launchOptions: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
           ? {
               executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,

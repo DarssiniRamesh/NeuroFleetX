@@ -27,8 +27,13 @@ export async function registerViaUI(page: Page, opts: { role: Role; name?: strin
   await page.getByTestId('register-role').selectOption(opts.role);
 
   // Make post-submit navigation deterministic: wait for the URL change explicitly.
+  // IMPORTANT: Do not wait for the full "load" event: SPAs may keep long-lived connections open,
+  // and Playwright's default waitUntil="load" can become flaky even after URL change.
   await Promise.all([
-    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\/')}$`), { timeout: 30_000 }),
+    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\\\\\/')}$`), {
+      timeout: 30_000,
+      waitUntil: 'domcontentloaded',
+    }),
     page.getByTestId('register-submit').click(),
   ]);
 
@@ -56,7 +61,10 @@ export async function loginViaUI(page: Page, opts: { email: string; password: st
   await page.getByTestId('login-password').fill(opts.password);
 
   await Promise.all([
-    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\/')}$`), { timeout: 30_000 }),
+    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\\\\\/')}$`), {
+      timeout: 30_000,
+      waitUntil: 'domcontentloaded',
+    }),
     page.getByTestId('login-submit').click(),
   ]);
 
