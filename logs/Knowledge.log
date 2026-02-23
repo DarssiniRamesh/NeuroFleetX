@@ -586,3 +586,1017 @@
 2026-02-23 06:12:12,215 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 268, Duration: 0ms
 2026-02-23 06:12:12,383 - Knowledge - INFO - Saving knowledge to Redis...
 2026-02-23 06:12:12,692 - Knowledge - INFO - Knowledge saved to Redis successfully
+2026-02-23 07:34:22,054 - Knowledge - INFO - Created shared MongoDB connection pool
+2026-02-23 07:34:22,422 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2026-02-23 07:34:22,614 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2026-02-23 07:34:22,771 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=10, max_concurrent_llm_calls=50
+2026-02-23 07:34:23,884 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2026-02-23 07:34:24,036 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2026-02-23 07:34:24,247 - Knowledge - INFO - load persisted knowledge: begin
+2026-02-23 07:34:25,578 - Knowledge - INFO - Persisted knowledge files in /app/data/T0015/325290/b8330ke/NeuroFleetX/.knowledge have been renamed to use .json
+2026-02-23 07:34:25,755 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:25,959 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:26,259 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:26,438 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:26,673 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleRepository.java
+2026-02-23 07:34:27,022 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 137ms
+2026-02-23 07:34:28,193 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleRepository.java, Duration: 1001ms
+2026-02-23 07:34:28,369 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleRepository.java
+2026-02-23 07:34:28,572 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleRepository.java
+2026-02-23 07:34:28,786 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:28,969 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:29,274 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:29,476 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:29,649 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/DatatypePrograms/VariableInitialization.java
+2026-02-23 07:34:29,988 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 102ms
+2026-02-23 07:34:30,499 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/DatatypePrograms/VariableInitialization.java, Duration: 281ms
+2026-02-23 07:34:30,682 - Knowledge - INFO - persist search terms embedding for JavaExercises/DatatypePrograms/VariableInitialization.java
+2026-02-23 07:34:30,861 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/DatatypePrograms/VariableInitialization.java
+2026-02-23 07:34:31,072 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:31,239 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:31,473 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:31,685 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:31,868 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/VehicleRequest.java
+2026-02-23 07:34:32,132 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 90ms
+2026-02-23 07:34:32,550 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/dto/VehicleRequest.java, Duration: 213ms
+2026-02-23 07:34:32,718 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/dto/VehicleRequest.java
+2026-02-23 07:34:32,915 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/VehicleRequest.java
+2026-02-23 07:34:33,144 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:33,304 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:33,591 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:33,810 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:33,967 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleHealthLogRepository.java
+2026-02-23 07:34:34,222 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 97ms
+2026-02-23 07:34:34,652 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleHealthLogRepository.java, Duration: 239ms
+2026-02-23 07:34:34,812 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleHealthLogRepository.java
+2026-02-23 07:34:35,046 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/VehicleHealthLogRepository.java
+2026-02-23 07:34:35,222 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:35,411 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:35,675 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:35,834 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:36,023 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ConditionalPrograms/NestedIfExample.java
+2026-02-23 07:34:36,325 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 109ms
+2026-02-23 07:34:36,951 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ConditionalPrograms/NestedIfExample.java, Duration: 435ms
+2026-02-23 07:34:37,159 - Knowledge - INFO - persist search terms embedding for JavaExercises/ConditionalPrograms/NestedIfExample.java
+2026-02-23 07:34:37,328 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ConditionalPrograms/NestedIfExample.java
+2026-02-23 07:34:37,521 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:37,729 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:38,035 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:38,234 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:38,426 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ClassAndConstructorPrograms/ParameterizedConstructor.java
+2026-02-23 07:34:38,711 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 100ms
+2026-02-23 07:34:39,179 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ClassAndConstructorPrograms/ParameterizedConstructor.java, Duration: 275ms
+2026-02-23 07:34:39,405 - Knowledge - INFO - persist search terms embedding for JavaExercises/ClassAndConstructorPrograms/ParameterizedConstructor.java
+2026-02-23 07:34:39,569 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ClassAndConstructorPrograms/ParameterizedConstructor.java
+2026-02-23 07:34:39,732 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:39,918 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:40,156 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:40,338 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:40,511 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/OperatorPrograms/ArithmeticOperator.java
+2026-02-23 07:34:40,811 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 119ms
+2026-02-23 07:34:41,232 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/OperatorPrograms/ArithmeticOperator.java, Duration: 263ms
+2026-02-23 07:34:41,375 - Knowledge - INFO - persist search terms embedding for JavaExercises/OperatorPrograms/ArithmeticOperator.java
+2026-02-23 07:34:41,582 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/OperatorPrograms/ArithmeticOperator.java
+2026-02-23 07:34:41,756 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:41,954 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:42,215 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:42,391 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:42,561 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/Springboot Exercise/_/src/test/java/com/jdoodle/JdoodleProjectApplicationTests.java
+2026-02-23 07:34:42,915 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 126ms
+2026-02-23 07:34:43,425 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: Springboot Exercise/_/src/test/java/com/jdoodle/JdoodleProjectApplicationTests.java, Duration: 303ms
+2026-02-23 07:34:43,618 - Knowledge - INFO - persist search terms embedding for Springboot Exercise/_/src/test/java/com/jdoodle/JdoodleProjectApplicationTests.java
+2026-02-23 07:34:43,797 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/Springboot Exercise/_/src/test/java/com/jdoodle/JdoodleProjectApplicationTests.java
+2026-02-23 07:34:43,967 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:44,155 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:44,446 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:44,642 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:44,876 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RideCreateRequest.java
+2026-02-23 07:34:45,160 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 104ms
+2026-02-23 07:34:45,599 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/dto/RideCreateRequest.java, Duration: 259ms
+2026-02-23 07:34:45,806 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/dto/RideCreateRequest.java
+2026-02-23 07:34:46,011 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RideCreateRequest.java
+2026-02-23 07:34:46,177 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:46,383 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:46,633 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:46,833 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:47,056 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/VehicleController.java
+2026-02-23 07:34:47,294 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 94ms
+2026-02-23 07:34:47,743 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/controller/VehicleController.java, Duration: 273ms
+2026-02-23 07:34:47,931 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/controller/VehicleController.java
+2026-02-23 07:34:48,088 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/VehicleController.java
+2026-02-23 07:34:48,292 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:48,483 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:48,772 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:48,934 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:49,126 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/AuthService.java
+2026-02-23 07:34:49,464 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 142ms
+2026-02-23 07:34:49,872 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/service/AuthService.java, Duration: 229ms
+2026-02-23 07:34:50,068 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/service/AuthService.java
+2026-02-23 07:34:50,273 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/AuthService.java
+2026-02-23 07:34:50,458 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:50,657 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:50,906 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:51,116 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:51,256 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/DriverController.java
+2026-02-23 07:34:51,581 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 111ms
+2026-02-23 07:34:52,000 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/controller/DriverController.java, Duration: 206ms
+2026-02-23 07:34:52,187 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/controller/DriverController.java
+2026-02-23 07:34:52,392 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/DriverController.java
+2026-02-23 07:34:52,562 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:52,736 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:53,057 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:53,294 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:53,473 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/Profile.jsx
+2026-02-23 07:34:53,737 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 92ms
+2026-02-23 07:34:54,122 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/driver/Profile.jsx, Duration: 223ms
+2026-02-23 07:34:54,373 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/driver/Profile.jsx
+2026-02-23 07:34:54,578 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/Profile.jsx
+2026-02-23 07:34:54,809 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:55,040 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:55,341 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:55,530 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:55,692 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/context/AuthContext.jsx
+2026-02-23 07:34:55,981 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 97ms
+2026-02-23 07:34:56,537 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/context/AuthContext.jsx, Duration: 358ms
+2026-02-23 07:34:56,725 - Knowledge - INFO - persist search terms embedding for frontend/src/context/AuthContext.jsx
+2026-02-23 07:34:56,929 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/context/AuthContext.jsx
+2026-02-23 07:34:57,143 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:57,321 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:57,601 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:57,777 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:57,935 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/config/SecurityConfig.java
+2026-02-23 07:34:58,207 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 116ms
+2026-02-23 07:34:58,643 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/config/SecurityConfig.java, Duration: 253ms
+2026-02-23 07:34:58,817 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/config/SecurityConfig.java
+2026-02-23 07:34:59,039 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/config/SecurityConfig.java
+2026-02-23 07:34:59,249 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:59,454 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:34:59,730 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:34:59,888 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:00,073 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/test/java/com/neurofleetx/NeurofleetxApplicationTests.java
+2026-02-23 07:35:00,360 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 124ms
+2026-02-23 07:35:00,825 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/test/java/com/neurofleetx/NeurofleetxApplicationTests.java, Duration: 226ms
+2026-02-23 07:35:01,002 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/test/java/com/neurofleetx/NeurofleetxApplicationTests.java
+2026-02-23 07:35:01,177 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/test/java/com/neurofleetx/NeurofleetxApplicationTests.java
+2026-02-23 07:35:01,406 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:01,625 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:01,971 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:02,154 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:02,372 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/eslint.config.js
+2026-02-23 07:35:02,702 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 119ms
+2026-02-23 07:35:03,226 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/eslint.config.js, Duration: 317ms
+2026-02-23 07:35:03,379 - Knowledge - INFO - persist search terms embedding for ReactExercise/eslint.config.js
+2026-02-23 07:35:03,574 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/eslint.config.js
+2026-02-23 07:35:03,737 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:03,925 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:04,159 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:04,357 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:04,517 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ConditionalPrograms/SwitchCaseExample.java
+2026-02-23 07:35:04,782 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 97ms
+2026-02-23 07:35:05,181 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ConditionalPrograms/SwitchCaseExample.java, Duration: 201ms
+2026-02-23 07:35:05,333 - Knowledge - INFO - persist search terms embedding for JavaExercises/ConditionalPrograms/SwitchCaseExample.java
+2026-02-23 07:35:05,545 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ConditionalPrograms/SwitchCaseExample.java
+2026-02-23 07:35:05,718 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:05,901 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:06,150 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:06,336 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:06,507 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/User.java
+2026-02-23 07:35:06,818 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 97ms
+2026-02-23 07:35:07,256 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/entity/User.java, Duration: 262ms
+2026-02-23 07:35:07,427 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/entity/User.java
+2026-02-23 07:35:07,598 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/User.java
+2026-02-23 07:35:07,774 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:07,981 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:08,266 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:08,442 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:08,673 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/README.md
+2026-02-23 07:35:08,963 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 118ms
+2026-02-23 07:35:09,403 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/README.md, Duration: 273ms
+2026-02-23 07:35:09,547 - Knowledge - INFO - persist search terms embedding for frontend/README.md
+2026-02-23 07:35:09,747 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/README.md
+2026-02-23 07:35:10,000 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:10,171 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:10,484 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:10,698 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:10,847 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/index.css
+2026-02-23 07:35:11,145 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 147ms
+2026-02-23 07:35:11,558 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/index.css, Duration: 244ms
+2026-02-23 07:35:11,716 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/index.css
+2026-02-23 07:35:11,915 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/index.css
+2026-02-23 07:35:12,130 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:12,314 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:12,579 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:12,750 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:12,908 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/tsconfig.json
+2026-02-23 07:35:13,201 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 134ms
+2026-02-23 07:35:13,680 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/tsconfig.json, Duration: 268ms
+2026-02-23 07:35:13,888 - Knowledge - INFO - persist search terms embedding for frontend/tsconfig.json
+2026-02-23 07:35:14,079 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/tsconfig.json
+2026-02-23 07:35:14,231 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:14,413 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:14,738 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:14,909 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:15,122 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/RideController.java
+2026-02-23 07:35:15,467 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 129ms
+2026-02-23 07:35:15,858 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/controller/RideController.java, Duration: 218ms
+2026-02-23 07:35:16,059 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/controller/RideController.java
+2026-02-23 07:35:16,270 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/RideController.java
+2026-02-23 07:35:16,445 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:16,663 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:16,936 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:17,108 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:17,310 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ArrayPrograms/SingleArrayExample.java
+2026-02-23 07:35:17,610 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 115ms
+2026-02-23 07:35:18,105 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ArrayPrograms/SingleArrayExample.java, Duration: 293ms
+2026-02-23 07:35:18,270 - Knowledge - INFO - persist search terms embedding for JavaExercises/ArrayPrograms/SingleArrayExample.java
+2026-02-23 07:35:18,455 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ArrayPrograms/SingleArrayExample.java
+2026-02-23 07:35:18,634 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:18,838 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:19,155 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:19,342 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:19,500 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/StateExample.jsx
+2026-02-23 07:35:19,768 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 108ms
+2026-02-23 07:35:20,207 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/components/StateExample.jsx, Duration: 273ms
+2026-02-23 07:35:20,397 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/components/StateExample.jsx
+2026-02-23 07:35:20,617 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/StateExample.jsx
+2026-02-23 07:35:20,792 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:20,992 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:21,312 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:21,469 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:21,650 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ArrayPrograms/MultiDimensionalArray.java
+2026-02-23 07:35:21,935 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 121ms
+2026-02-23 07:35:22,399 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ArrayPrograms/MultiDimensionalArray.java, Duration: 292ms
+2026-02-23 07:35:22,565 - Knowledge - INFO - persist search terms embedding for JavaExercises/ArrayPrograms/MultiDimensionalArray.java
+2026-02-23 07:35:22,798 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ArrayPrograms/MultiDimensionalArray.java
+2026-02-23 07:35:22,958 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:23,151 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:23,428 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:23,598 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:23,787 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/PredictiveMaintenance.jsx
+2026-02-23 07:35:24,091 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 112ms
+2026-02-23 07:35:24,533 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/admin/PredictiveMaintenance.jsx, Duration: 215ms
+2026-02-23 07:35:24,709 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/admin/PredictiveMaintenance.jsx
+2026-02-23 07:35:24,870 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/PredictiveMaintenance.jsx
+2026-02-23 07:35:25,071 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:25,244 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:25,507 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:25,663 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:25,856 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/package.json
+2026-02-23 07:35:26,134 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 109ms
+2026-02-23 07:35:26,643 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/package.json, Duration: 271ms
+2026-02-23 07:35:26,803 - Knowledge - INFO - persist search terms embedding for ReactExercise/package.json
+2026-02-23 07:35:26,989 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/package.json
+2026-02-23 07:35:27,197 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:27,372 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:27,715 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:27,908 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:28,106 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/MaintenanceLog.java
+2026-02-23 07:35:28,402 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 114ms
+2026-02-23 07:35:28,810 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/entity/MaintenanceLog.java, Duration: 232ms
+2026-02-23 07:35:28,996 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/entity/MaintenanceLog.java
+2026-02-23 07:35:29,195 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/MaintenanceLog.java
+2026-02-23 07:35:29,399 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:29,627 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:30,044 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:30,223 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:30,385 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/lib/utils.ts
+2026-02-23 07:35:30,683 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 116ms
+2026-02-23 07:35:31,123 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/lib/utils.ts, Duration: 231ms
+2026-02-23 07:35:31,336 - Knowledge - INFO - persist search terms embedding for frontend/src/lib/utils.ts
+2026-02-23 07:35:31,537 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/lib/utils.ts
+2026-02-23 07:35:31,701 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:31,876 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:32,148 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:32,320 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:32,502 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/pom.xml
+2026-02-23 07:35:32,787 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 112ms
+2026-02-23 07:35:33,250 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/pom.xml, Duration: 270ms
+2026-02-23 07:35:33,422 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/pom.xml
+2026-02-23 07:35:33,610 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/pom.xml
+2026-02-23 07:35:33,858 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:34,070 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:34,352 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:34,545 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:34,757 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/auth/Login.jsx
+2026-02-23 07:35:35,101 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 160ms
+2026-02-23 07:35:35,555 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/auth/Login.jsx, Duration: 253ms
+2026-02-23 07:35:35,727 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/auth/Login.jsx
+2026-02-23 07:35:35,887 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/auth/Login.jsx
+2026-02-23 07:35:36,104 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:36,263 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:36,505 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:36,689 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:36,867 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java
+2026-02-23 07:35:37,141 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 110ms
+2026-02-23 07:35:37,555 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java, Duration: 200ms
+2026-02-23 07:35:37,733 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java
+2026-02-23 07:35:37,912 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java
+2026-02-23 07:35:38,101 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:38,251 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:38,562 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:38,743 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:38,926 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/Springboot Exercise/_/src/main/java/com/jdoodle/JdoodleProjectApplication.java
+2026-02-23 07:35:39,235 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 146ms
+2026-02-23 07:35:40,985 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: Springboot Exercise/_/src/main/java/com/jdoodle/JdoodleProjectApplication.java, Duration: 1560ms
+2026-02-23 07:35:41,149 - Knowledge - INFO - persist search terms embedding for Springboot Exercise/_/src/main/java/com/jdoodle/JdoodleProjectApplication.java
+2026-02-23 07:35:41,317 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/Springboot Exercise/_/src/main/java/com/jdoodle/JdoodleProjectApplication.java
+2026-02-23 07:35:41,516 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:41,703 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:42,035 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:42,178 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:42,339 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/tailwind.config.js
+2026-02-23 07:35:42,688 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 124ms
+2026-02-23 07:35:43,287 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/tailwind.config.js, Duration: 423ms
+2026-02-23 07:35:43,451 - Knowledge - INFO - persist search terms embedding for frontend/tailwind.config.js
+2026-02-23 07:35:43,614 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/tailwind.config.js
+2026-02-23 07:35:43,805 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:43,990 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:44,263 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:35:44,483 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:35:44,675 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/config/WebConfig.java
+2026-02-23 07:35:44,997 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 139ms
+2026-02-23 07:36:21,443 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/config/WebConfig.java, Duration: 36297ms
+2026-02-23 07:36:21,635 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/config/WebConfig.java
+2026-02-23 07:36:21,825 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/config/WebConfig.java
+2026-02-23 07:36:22,031 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:22,189 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:22,564 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:22,782 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:22,945 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/AuthController.java
+2026-02-23 07:36:23,266 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 151ms
+2026-02-23 07:36:23,761 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/controller/AuthController.java, Duration: 312ms
+2026-02-23 07:36:23,928 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/controller/AuthController.java
+2026-02-23 07:36:24,106 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/AuthController.java
+2026-02-23 07:36:24,300 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:24,466 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:24,794 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:24,985 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:25,152 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/App.jsx
+2026-02-23 07:36:25,413 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 98ms
+2026-02-23 07:36:25,838 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/App.jsx, Duration: 265ms
+2026-02-23 07:36:26,016 - Knowledge - INFO - persist search terms embedding for frontend/src/App.jsx
+2026-02-23 07:36:26,222 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/App.jsx
+2026-02-23 07:36:26,448 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:26,633 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:26,932 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:27,128 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:27,301 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/index.html
+2026-02-23 07:36:27,639 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 156ms
+2026-02-23 07:36:28,095 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/index.html, Duration: 255ms
+2026-02-23 07:36:28,254 - Knowledge - INFO - persist search terms embedding for frontend/index.html
+2026-02-23 07:36:28,436 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/index.html
+2026-02-23 07:36:28,605 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:28,760 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:29,113 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:29,290 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:29,465 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/vite.config.js
+2026-02-23 07:36:29,809 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 133ms
+2026-02-23 07:36:30,341 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/vite.config.js, Duration: 370ms
+2026-02-23 07:36:30,522 - Knowledge - INFO - persist search terms embedding for frontend/vite.config.js
+2026-02-23 07:36:30,750 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/vite.config.js
+2026-02-23 07:36:30,922 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:31,110 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:31,383 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:31,565 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:31,746 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/Booking.java
+2026-02-23 07:36:32,084 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 114ms
+2026-02-23 07:36:32,788 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/entity/Booking.java, Duration: 495ms
+2026-02-23 07:36:32,945 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/entity/Booking.java
+2026-02-23 07:36:33,115 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/Booking.java
+2026-02-23 07:36:33,286 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:33,434 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:33,782 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:34,034 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:34,198 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/NeurofleetxApplication.java
+2026-02-23 07:36:34,511 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 130ms
+2026-02-23 07:36:34,902 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/NeurofleetxApplication.java, Duration: 215ms
+2026-02-23 07:36:35,078 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/NeurofleetxApplication.java
+2026-02-23 07:36:35,238 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/NeurofleetxApplication.java
+2026-02-23 07:36:35,425 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:35,630 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:35,886 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:36,047 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:36,230 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/LoopingPrograms/DoWhileExample.java
+2026-02-23 07:36:36,583 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 141ms
+2026-02-23 07:36:37,074 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/LoopingPrograms/DoWhileExample.java, Duration: 261ms
+2026-02-23 07:36:37,290 - Knowledge - INFO - persist search terms embedding for JavaExercises/LoopingPrograms/DoWhileExample.java
+2026-02-23 07:36:37,470 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/LoopingPrograms/DoWhileExample.java
+2026-02-23 07:36:37,654 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:37,840 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:38,126 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:38,296 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:38,496 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/RouteOptimization.jsx
+2026-02-23 07:36:38,758 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 103ms
+2026-02-23 07:36:39,169 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/admin/RouteOptimization.jsx, Duration: 257ms
+2026-02-23 07:36:39,377 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/admin/RouteOptimization.jsx
+2026-02-23 07:36:39,535 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/RouteOptimization.jsx
+2026-02-23 07:36:39,734 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:39,914 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:40,236 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:40,415 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:40,581 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/DatatypePrograms/DataTypesExample1.java
+2026-02-23 07:36:40,879 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 105ms
+2026-02-23 07:36:41,411 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/DatatypePrograms/DataTypesExample1.java, Duration: 326ms
+2026-02-23 07:36:41,574 - Knowledge - INFO - persist search terms embedding for JavaExercises/DatatypePrograms/DataTypesExample1.java
+2026-02-23 07:36:41,781 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/DatatypePrograms/DataTypesExample1.java
+2026-02-23 07:36:42,001 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:42,201 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:42,443 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:42,622 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:42,791 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/DriverService.java
+2026-02-23 07:36:43,162 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 128ms
+2026-02-23 07:36:43,562 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/service/DriverService.java, Duration: 221ms
+2026-02-23 07:36:43,728 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/service/DriverService.java
+2026-02-23 07:36:43,942 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/DriverService.java
+2026-02-23 07:36:44,146 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:44,345 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:44,603 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:44,786 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:44,985 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/EffectExample.jsx
+2026-02-23 07:36:45,308 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 98ms
+2026-02-23 07:36:45,798 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/components/EffectExample.jsx, Duration: 282ms
+2026-02-23 07:36:46,025 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/components/EffectExample.jsx
+2026-02-23 07:36:46,221 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/EffectExample.jsx
+2026-02-23 07:36:46,403 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:46,631 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:46,915 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:47,118 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:47,279 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/auth/Register.jsx
+2026-02-23 07:36:47,587 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 115ms
+2026-02-23 07:36:48,103 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/auth/Register.jsx, Duration: 263ms
+2026-02-23 07:36:48,290 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/auth/Register.jsx
+2026-02-23 07:36:48,476 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/auth/Register.jsx
+2026-02-23 07:36:48,656 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:48,846 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:49,087 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:49,315 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:49,488 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/model/RideRequest.java
+2026-02-23 07:36:49,793 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 126ms
+2026-02-23 07:36:50,238 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/model/RideRequest.java, Duration: 232ms
+2026-02-23 07:36:50,397 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/model/RideRequest.java
+2026-02-23 07:36:50,610 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/model/RideRequest.java
+2026-02-23 07:36:50,807 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:50,984 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:51,256 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:51,426 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:51,605 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/api/axios.js
+2026-02-23 07:36:51,875 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 118ms
+2026-02-23 07:36:52,414 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/api/axios.js, Duration: 355ms
+2026-02-23 07:36:52,573 - Knowledge - INFO - persist search terms embedding for frontend/src/api/axios.js
+2026-02-23 07:36:52,777 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/api/axios.js
+2026-02-23 07:36:52,947 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:53,151 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:53,426 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:53,596 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:53,751 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ClassAndConstructorPrograms/ClassObjectExample.java
+2026-02-23 07:36:54,010 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 103ms
+2026-02-23 07:36:54,484 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ClassAndConstructorPrograms/ClassObjectExample.java, Duration: 287ms
+2026-02-23 07:36:54,741 - Knowledge - INFO - persist search terms embedding for JavaExercises/ClassAndConstructorPrograms/ClassObjectExample.java
+2026-02-23 07:36:54,937 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ClassAndConstructorPrograms/ClassObjectExample.java
+2026-02-23 07:36:55,119 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:55,326 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:55,597 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:55,746 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:55,944 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ConditionalPrograms/IfElseExample.java
+2026-02-23 07:36:56,228 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 104ms
+2026-02-23 07:36:56,701 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ConditionalPrograms/IfElseExample.java, Duration: 279ms
+2026-02-23 07:36:56,864 - Knowledge - INFO - persist search terms embedding for JavaExercises/ConditionalPrograms/IfElseExample.java
+2026-02-23 07:36:57,072 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ConditionalPrograms/IfElseExample.java
+2026-02-23 07:36:57,263 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:57,446 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:57,774 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:57,977 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:36:58,177 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/main.jsx
+2026-02-23 07:36:58,484 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 123ms
+2026-02-23 07:36:58,907 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/main.jsx, Duration: 265ms
+2026-02-23 07:36:59,060 - Knowledge - INFO - persist search terms embedding for frontend/src/main.jsx
+2026-02-23 07:36:59,255 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/main.jsx
+2026-02-23 07:36:59,630 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:36:59,798 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:00,058 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:00,237 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:00,430 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/AdminDashboard.jsx
+2026-02-23 07:37:00,731 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 110ms
+2026-02-23 07:37:01,244 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/admin/AdminDashboard.jsx, Duration: 287ms
+2026-02-23 07:37:01,395 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/admin/AdminDashboard.jsx
+2026-02-23 07:37:01,586 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/AdminDashboard.jsx
+2026-02-23 07:37:01,765 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:01,966 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:02,246 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:02,425 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:02,588 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/index.html
+2026-02-23 07:37:02,861 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 93ms
+2026-02-23 07:37:03,356 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/index.html, Duration: 289ms
+2026-02-23 07:37:03,548 - Knowledge - INFO - persist search terms embedding for ReactExercise/index.html
+2026-02-23 07:37:03,710 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/index.html
+2026-02-23 07:37:03,907 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:04,070 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:04,357 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:04,523 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:04,720 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/layout/DashboardLayout.jsx
+2026-02-23 07:37:05,017 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 103ms
+2026-02-23 07:37:05,432 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/components/layout/DashboardLayout.jsx, Duration: 214ms
+2026-02-23 07:37:05,614 - Knowledge - INFO - persist search terms embedding for frontend/src/components/layout/DashboardLayout.jsx
+2026-02-23 07:37:05,782 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/layout/DashboardLayout.jsx
+2026-02-23 07:37:05,948 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:06,150 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:06,403 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:06,592 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:06,756 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/App.jsx
+2026-02-23 07:37:07,078 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 97ms
+2026-02-23 07:37:07,524 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/App.jsx, Duration: 249ms
+2026-02-23 07:37:07,722 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/App.jsx
+2026-02-23 07:37:07,884 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/App.jsx
+2026-02-23 07:37:08,081 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:08,237 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:08,515 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:08,702 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:08,898 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/RouteService.java
+2026-02-23 07:37:09,153 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 95ms
+2026-02-23 07:37:09,630 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/service/RouteService.java, Duration: 274ms
+2026-02-23 07:37:09,795 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/service/RouteService.java
+2026-02-23 07:37:10,011 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/RouteService.java
+2026-02-23 07:37:10,215 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:10,363 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:10,614 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:10,775 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:10,964 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/ui/button.tsx
+2026-02-23 07:37:11,247 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 113ms
+2026-02-23 07:37:11,876 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/components/ui/button.tsx, Duration: 429ms
+2026-02-23 07:37:12,042 - Knowledge - INFO - persist search terms embedding for frontend/src/components/ui/button.tsx
+2026-02-23 07:37:12,224 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/ui/button.tsx
+2026-02-23 07:37:12,384 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:12,548 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:12,835 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:12,988 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:13,215 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/DriverManagement.jsx
+2026-02-23 07:37:13,507 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 94ms
+2026-02-23 07:37:13,959 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/admin/DriverManagement.jsx, Duration: 250ms
+2026-02-23 07:37:14,151 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/admin/DriverManagement.jsx
+2026-02-23 07:37:14,338 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/DriverManagement.jsx
+2026-02-23 07:37:14,523 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:14,697 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:14,968 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:15,164 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:15,324 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/BookingRepository.java
+2026-02-23 07:37:15,660 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 103ms
+2026-02-23 07:37:16,095 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/repository/BookingRepository.java, Duration: 268ms
+2026-02-23 07:37:16,294 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/repository/BookingRepository.java
+2026-02-23 07:37:16,444 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/BookingRepository.java
+2026-02-23 07:37:16,664 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:16,849 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:17,076 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:17,256 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:17,449 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginRequest.java
+2026-02-23 07:37:17,727 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 111ms
+2026-02-23 07:37:18,143 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginRequest.java, Duration: 261ms
+2026-02-23 07:37:18,340 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginRequest.java
+2026-02-23 07:37:18,580 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginRequest.java
+2026-02-23 07:37:18,742 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:18,928 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:19,183 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:19,331 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:19,506 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ArrayPrograms/ArraySum.java
+2026-02-23 07:37:19,814 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 125ms
+2026-02-23 07:37:20,246 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ArrayPrograms/ArraySum.java, Duration: 276ms
+2026-02-23 07:37:20,450 - Knowledge - INFO - persist search terms embedding for JavaExercises/ArrayPrograms/ArraySum.java
+2026-02-23 07:37:20,637 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ArrayPrograms/ArraySum.java
+2026-02-23 07:37:20,834 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:21,003 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:21,250 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:21,433 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:21,650 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/DatatypePrograms/TypeCastingExample.java
+2026-02-23 07:37:21,932 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 104ms
+2026-02-23 07:37:22,380 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/DatatypePrograms/TypeCastingExample.java, Duration: 240ms
+2026-02-23 07:37:22,526 - Knowledge - INFO - persist search terms embedding for JavaExercises/DatatypePrograms/TypeCastingExample.java
+2026-02-23 07:37:22,700 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/DatatypePrograms/TypeCastingExample.java
+2026-02-23 07:37:22,918 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:23,123 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:23,403 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:23,597 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:23,770 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/OperatorPrograms/RelationalOperator.java
+2026-02-23 07:37:24,043 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 94ms
+2026-02-23 07:37:24,389 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/OperatorPrograms/RelationalOperator.java, Duration: 177ms
+2026-02-23 07:37:24,579 - Knowledge - INFO - persist search terms embedding for JavaExercises/OperatorPrograms/RelationalOperator.java
+2026-02-23 07:37:24,735 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/OperatorPrograms/RelationalOperator.java
+2026-02-23 07:37:24,907 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:25,136 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:25,386 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:25,573 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:25,790 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/OperatorPrograms/LogicalOperator.java
+2026-02-23 07:37:26,088 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 105ms
+2026-02-23 07:37:26,555 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/OperatorPrograms/LogicalOperator.java, Duration: 289ms
+2026-02-23 07:37:26,712 - Knowledge - INFO - persist search terms embedding for JavaExercises/OperatorPrograms/LogicalOperator.java
+2026-02-23 07:37:26,917 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/OperatorPrograms/LogicalOperator.java
+2026-02-23 07:37:27,091 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:27,237 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:27,490 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:27,691 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:27,855 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/components.json
+2026-02-23 07:37:28,195 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 125ms
+2026-02-23 07:37:28,569 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/components.json, Duration: 213ms
+2026-02-23 07:37:28,746 - Knowledge - INFO - persist search terms embedding for frontend/components.json
+2026-02-23 07:37:28,936 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/components.json
+2026-02-23 07:37:29,103 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:29,286 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:29,566 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:29,791 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:29,987 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/PropsExample.jsx
+2026-02-23 07:37:30,245 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 96ms
+2026-02-23 07:37:30,659 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/components/PropsExample.jsx, Duration: 244ms
+2026-02-23 07:37:30,859 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/components/PropsExample.jsx
+2026-02-23 07:37:31,047 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/PropsExample.jsx
+2026-02-23 07:37:31,242 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:31,391 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:31,666 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:31,818 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:31,990 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/MaintenanceLogRepository.java
+2026-02-23 07:37:32,284 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 91ms
+2026-02-23 07:37:32,679 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/repository/MaintenanceLogRepository.java, Duration: 239ms
+2026-02-23 07:37:32,859 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/repository/MaintenanceLogRepository.java
+2026-02-23 07:37:33,112 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/MaintenanceLogRepository.java
+2026-02-23 07:37:33,282 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:33,454 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:33,723 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:33,915 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:34,064 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/ui/input.tsx
+2026-02-23 07:37:34,364 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 102ms
+2026-02-23 07:37:34,817 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/components/ui/input.tsx, Duration: 282ms
+2026-02-23 07:37:35,014 - Knowledge - INFO - persist search terms embedding for frontend/src/components/ui/input.tsx
+2026-02-23 07:37:35,180 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/ui/input.tsx
+2026-02-23 07:37:35,394 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:35,580 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:35,851 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:36,054 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:36,217 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/App.css
+2026-02-23 07:37:36,511 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 96ms
+2026-02-23 07:37:36,915 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/App.css, Duration: 247ms
+2026-02-23 07:37:37,134 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/App.css
+2026-02-23 07:37:37,282 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/App.css
+2026-02-23 07:37:37,443 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:37,673 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:37,920 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:38,105 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:38,301 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/main.jsx
+2026-02-23 07:37:38,567 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 96ms
+2026-02-23 07:37:39,046 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/main.jsx, Duration: 287ms
+2026-02-23 07:37:39,251 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/main.jsx
+2026-02-23 07:37:39,418 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/main.jsx
+2026-02-23 07:37:39,622 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:39,815 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:40,066 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:40,255 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:40,464 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteResponse.java
+2026-02-23 07:37:40,775 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 110ms
+2026-02-23 07:37:41,226 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteResponse.java, Duration: 256ms
+2026-02-23 07:37:41,429 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteResponse.java
+2026-02-23 07:37:41,637 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteResponse.java
+2026-02-23 07:37:41,853 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:42,076 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:42,348 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:42,538 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:42,717 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/index.css
+2026-02-23 07:37:43,058 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 109ms
+2026-02-23 07:37:43,511 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/index.css, Duration: 248ms
+2026-02-23 07:37:43,749 - Knowledge - INFO - persist search terms embedding for frontend/src/index.css
+2026-02-23 07:37:43,921 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/index.css
+2026-02-23 07:37:44,089 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:44,279 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:44,573 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:44,774 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:44,977 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/VehicleHealthLog.java
+2026-02-23 07:37:45,348 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 128ms
+2026-02-23 07:37:45,753 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/entity/VehicleHealthLog.java, Duration: 217ms
+2026-02-23 07:37:45,938 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/entity/VehicleHealthLog.java
+2026-02-23 07:37:46,183 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/VehicleHealthLog.java
+2026-02-23 07:37:46,403 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:46,604 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:46,844 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:47,000 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:47,155 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RegisterRequest.java
+2026-02-23 07:37:47,436 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 94ms
+2026-02-23 07:37:47,855 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/dto/RegisterRequest.java, Duration: 273ms
+2026-02-23 07:37:48,052 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/dto/RegisterRequest.java
+2026-02-23 07:37:48,258 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RegisterRequest.java
+2026-02-23 07:37:48,452 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:48,630 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:48,914 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:49,110 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:49,296 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/ConditionalExample.jsx
+2026-02-23 07:37:49,623 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 113ms
+2026-02-23 07:37:50,100 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/components/ConditionalExample.jsx, Duration: 288ms
+2026-02-23 07:37:50,279 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/components/ConditionalExample.jsx
+2026-02-23 07:37:50,474 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/ConditionalExample.jsx
+2026-02-23 07:37:50,652 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:50,832 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:51,137 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:51,338 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:51,540 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/layout/Sidebar.jsx
+2026-02-23 07:37:51,861 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 134ms
+2026-02-23 07:37:52,299 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/components/layout/Sidebar.jsx, Duration: 228ms
+2026-02-23 07:37:52,515 - Knowledge - INFO - persist search terms embedding for frontend/src/components/layout/Sidebar.jsx
+2026-02-23 07:37:52,757 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/layout/Sidebar.jsx
+2026-02-23 07:37:52,909 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:53,110 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:53,392 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:53,566 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:53,788 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/README.md
+2026-02-23 07:37:54,079 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 116ms
+2026-02-23 07:37:54,462 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: README.md, Duration: 209ms
+2026-02-23 07:37:54,665 - Knowledge - INFO - persist search terms embedding for README.md
+2026-02-23 07:37:54,821 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/README.md
+2026-02-23 07:37:55,008 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:55,202 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:55,437 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:55,636 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:55,822 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/eslint.config.js
+2026-02-23 07:37:56,140 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 118ms
+2026-02-23 07:37:56,605 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/eslint.config.js, Duration: 262ms
+2026-02-23 07:37:56,784 - Knowledge - INFO - persist search terms embedding for frontend/eslint.config.js
+2026-02-23 07:37:56,960 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/eslint.config.js
+2026-02-23 07:37:57,187 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:57,343 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:57,601 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:57,772 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:57,954 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/vite.config.js
+2026-02-23 07:37:58,272 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 92ms
+2026-02-23 07:37:58,794 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/vite.config.js, Duration: 323ms
+2026-02-23 07:37:58,982 - Knowledge - INFO - persist search terms embedding for ReactExercise/vite.config.js
+2026-02-23 07:37:59,158 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/vite.config.js
+2026-02-23 07:37:59,360 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:59,553 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:37:59,775 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:37:59,927 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:00,148 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/Vehicle.java
+2026-02-23 07:38:00,413 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 93ms
+2026-02-23 07:38:00,821 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/entity/Vehicle.java, Duration: 204ms
+2026-02-23 07:38:01,039 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/entity/Vehicle.java
+2026-02-23 07:38:01,233 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/Vehicle.java
+2026-02-23 07:38:01,436 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:01,606 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:01,887 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:02,096 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:02,269 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/postcss.config.js
+2026-02-23 07:38:02,588 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 126ms
+2026-02-23 07:38:03,096 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/postcss.config.js, Duration: 283ms
+2026-02-23 07:38:03,268 - Knowledge - INFO - persist search terms embedding for frontend/postcss.config.js
+2026-02-23 07:38:03,487 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/postcss.config.js
+2026-02-23 07:38:03,689 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:03,859 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:04,124 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:04,290 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:04,481 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/FleetManagement.jsx
+2026-02-23 07:38:04,752 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 114ms
+2026-02-23 07:38:05,263 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/admin/FleetManagement.jsx, Duration: 274ms
+2026-02-23 07:38:05,449 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/admin/FleetManagement.jsx
+2026-02-23 07:38:05,623 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/admin/FleetManagement.jsx
+2026-02-23 07:38:05,831 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:06,010 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:06,275 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:06,445 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:06,627 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/routes/AppRoutes.jsx
+2026-02-23 07:38:06,913 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 117ms
+2026-02-23 07:38:07,496 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/routes/AppRoutes.jsx, Duration: 427ms
+2026-02-23 07:38:07,715 - Knowledge - INFO - persist search terms embedding for frontend/src/routes/AppRoutes.jsx
+2026-02-23 07:38:07,919 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/routes/AppRoutes.jsx
+2026-02-23 07:38:08,106 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:08,268 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:08,600 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:08,827 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:09,020 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/LoopingPrograms/WhileLoopExample.java
+2026-02-23 07:38:09,318 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 133ms
+2026-02-23 07:38:09,709 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/LoopingPrograms/WhileLoopExample.java, Duration: 197ms
+2026-02-23 07:38:09,890 - Knowledge - INFO - persist search terms embedding for JavaExercises/LoopingPrograms/WhileLoopExample.java
+2026-02-23 07:38:10,051 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/LoopingPrograms/WhileLoopExample.java
+2026-02-23 07:38:10,250 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:10,421 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:10,693 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:10,910 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:11,104 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/ListExample.jsx
+2026-02-23 07:38:11,445 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 107ms
+2026-02-23 07:38:11,874 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/components/ListExample.jsx, Duration: 256ms
+2026-02-23 07:38:12,058 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/components/ListExample.jsx
+2026-02-23 07:38:12,242 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/ListExample.jsx
+2026-02-23 07:38:12,424 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:12,581 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:12,831 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:13,041 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:13,271 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/RideRequestRepository.java
+2026-02-23 07:38:13,589 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 105ms
+2026-02-23 07:38:14,200 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/repository/RideRequestRepository.java, Duration: 422ms
+2026-02-23 07:38:14,362 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/repository/RideRequestRepository.java
+2026-02-23 07:38:14,562 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/RideRequestRepository.java
+2026-02-23 07:38:14,720 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:14,891 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:15,148 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:15,362 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:15,560 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/layout/Topbar.jsx
+2026-02-23 07:38:15,855 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 111ms
+2026-02-23 07:38:16,303 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/components/layout/Topbar.jsx, Duration: 235ms
+2026-02-23 07:38:16,495 - Knowledge - INFO - persist search terms embedding for frontend/src/components/layout/Topbar.jsx
+2026-02-23 07:38:16,683 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/layout/Topbar.jsx
+2026-02-23 07:38:16,901 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:17,080 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:17,387 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:17,604 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:17,825 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/README.md
+2026-02-23 07:38:18,139 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 88ms
+2026-02-23 07:38:18,587 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/README.md, Duration: 244ms
+2026-02-23 07:38:18,797 - Knowledge - INFO - persist search terms embedding for ReactExercise/README.md
+2026-02-23 07:38:18,992 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/README.md
+2026-02-23 07:38:19,170 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:19,335 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:19,564 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:19,720 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:19,912 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/Rendering.jsx
+2026-02-23 07:38:20,159 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 99ms
+2026-02-23 07:38:20,593 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/components/Rendering.jsx, Duration: 266ms
+2026-02-23 07:38:20,811 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/components/Rendering.jsx
+2026-02-23 07:38:20,998 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/Rendering.jsx
+2026-02-23 07:38:21,158 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:21,350 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:21,679 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:21,842 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:22,041 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/config/CorsConfig.java
+2026-02-23 07:38:22,331 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 110ms
+2026-02-23 07:38:22,831 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/config/CorsConfig.java, Duration: 292ms
+2026-02-23 07:38:23,000 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/config/CorsConfig.java
+2026-02-23 07:38:23,167 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/config/CorsConfig.java
+2026-02-23 07:38:23,322 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:23,552 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:23,805 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:23,972 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:24,176 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/database/seed.sql
+2026-02-23 07:38:24,475 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 97ms
+2026-02-23 07:38:24,944 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: database/seed.sql, Duration: 281ms
+2026-02-23 07:38:25,126 - Knowledge - INFO - persist search terms embedding for database/seed.sql
+2026-02-23 07:38:25,303 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/database/seed.sql
+2026-02-23 07:38:25,467 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:25,657 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:25,972 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:26,140 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:26,302 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/EventExample.jsx
+2026-02-23 07:38:26,629 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 112ms
+2026-02-23 07:38:27,067 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: ReactExercise/src/components/EventExample.jsx, Duration: 275ms
+2026-02-23 07:38:27,265 - Knowledge - INFO - persist search terms embedding for ReactExercise/src/components/EventExample.jsx
+2026-02-23 07:38:27,459 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/ReactExercise/src/components/EventExample.jsx
+2026-02-23 07:38:27,697 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:27,865 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:28,202 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:28,357 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:28,542 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/package.json
+2026-02-23 07:38:28,874 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 133ms
+2026-02-23 07:38:29,346 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/package.json, Duration: 296ms
+2026-02-23 07:38:29,510 - Knowledge - INFO - persist search terms embedding for frontend/package.json
+2026-02-23 07:38:29,659 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/package.json
+2026-02-23 07:38:29,895 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:30,076 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:30,361 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:30,567 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:30,756 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/tsconfig.app.json
+2026-02-23 07:38:31,036 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 108ms
+2026-02-23 07:38:31,527 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/tsconfig.app.json, Duration: 290ms
+2026-02-23 07:38:31,681 - Knowledge - INFO - persist search terms embedding for frontend/tsconfig.app.json
+2026-02-23 07:38:31,858 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/tsconfig.app.json
+2026-02-23 07:38:32,040 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:32,229 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:32,484 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:32,672 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:32,878 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/LoopingPrograms/ForLoopExample.java
+2026-02-23 07:38:33,170 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 109ms
+2026-02-23 07:38:33,640 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/LoopingPrograms/ForLoopExample.java, Duration: 259ms
+2026-02-23 07:38:33,838 - Knowledge - INFO - persist search terms embedding for JavaExercises/LoopingPrograms/ForLoopExample.java
+2026-02-23 07:38:34,034 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/LoopingPrograms/ForLoopExample.java
+2026-02-23 07:38:34,224 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:34,449 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:34,750 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:34,948 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:35,097 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/shared/Loader.jsx
+2026-02-23 07:38:35,375 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 123ms
+2026-02-23 07:38:35,784 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/components/shared/Loader.jsx, Duration: 233ms
+2026-02-23 07:38:35,938 - Knowledge - INFO - persist search terms embedding for frontend/src/components/shared/Loader.jsx
+2026-02-23 07:38:36,179 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/shared/Loader.jsx
+2026-02-23 07:38:36,371 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:36,547 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:36,809 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:36,981 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:37,173 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ClassAndConstructorPrograms/ConstructorExample.java
+2026-02-23 07:38:37,438 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 101ms
+2026-02-23 07:38:37,999 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: JavaExercises/ClassAndConstructorPrograms/ConstructorExample.java, Duration: 377ms
+2026-02-23 07:38:38,164 - Knowledge - INFO - persist search terms embedding for JavaExercises/ClassAndConstructorPrograms/ConstructorExample.java
+2026-02-23 07:38:38,372 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/JavaExercises/ClassAndConstructorPrograms/ConstructorExample.java
+2026-02-23 07:38:38,607 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:38,825 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:39,100 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:39,291 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:39,457 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/RouteController.java
+2026-02-23 07:38:39,745 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 109ms
+2026-02-23 07:38:40,178 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/controller/RouteController.java, Duration: 268ms
+2026-02-23 07:38:40,351 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/controller/RouteController.java
+2026-02-23 07:38:40,562 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/controller/RouteController.java
+2026-02-23 07:38:40,756 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:40,957 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:41,214 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:41,365 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:41,558 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/DriverDashboard.jsx
+2026-02-23 07:38:41,846 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 123ms
+2026-02-23 07:38:42,349 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/driver/DriverDashboard.jsx, Duration: 309ms
+2026-02-23 07:38:42,531 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/driver/DriverDashboard.jsx
+2026-02-23 07:38:42,730 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/DriverDashboard.jsx
+2026-02-23 07:38:42,890 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:43,146 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:43,414 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:43,626 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:43,818 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/Bookings.jsx
+2026-02-23 07:38:44,160 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 109ms
+2026-02-23 07:38:44,664 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/driver/Bookings.jsx, Duration: 264ms
+2026-02-23 07:38:44,842 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/driver/Bookings.jsx
+2026-02-23 07:38:45,028 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/Bookings.jsx
+2026-02-23 07:38:45,201 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:45,365 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:45,635 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:45,822 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:46,007 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteRequest.java
+2026-02-23 07:38:46,290 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 101ms
+2026-02-23 07:38:46,841 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteRequest.java, Duration: 368ms
+2026-02-23 07:38:47,067 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteRequest.java
+2026-02-23 07:38:47,254 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/RouteRequest.java
+2026-02-23 07:38:47,429 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:47,590 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:47,808 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:47,962 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:48,154 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/RideRequestService.java
+2026-02-23 07:38:48,482 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 123ms
+2026-02-23 07:38:48,971 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/service/RideRequestService.java, Duration: 276ms
+2026-02-23 07:38:49,174 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/service/RideRequestService.java
+2026-02-23 07:38:49,372 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/service/RideRequestService.java
+2026-02-23 07:38:49,555 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:49,727 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:49,994 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:50,180 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:50,381 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginResponse.java
+2026-02-23 07:38:50,657 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 98ms
+2026-02-23 07:38:51,135 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginResponse.java, Duration: 282ms
+2026-02-23 07:38:51,329 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginResponse.java
+2026-02-23 07:38:51,501 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/dto/LoginResponse.java
+2026-02-23 07:38:51,727 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:51,928 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:52,212 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:52,453 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:52,637 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/ui/card.tsx
+2026-02-23 07:38:52,890 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 92ms
+2026-02-23 07:38:53,397 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/components/ui/card.tsx, Duration: 271ms
+2026-02-23 07:38:53,589 - Knowledge - INFO - persist search terms embedding for frontend/src/components/ui/card.tsx
+2026-02-23 07:38:53,777 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/components/ui/card.tsx
+2026-02-23 07:38:54,005 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:54,170 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:54,451 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:54,632 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:54,800 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/Role.java
+2026-02-23 07:38:55,047 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 89ms
+2026-02-23 07:38:55,594 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/entity/Role.java, Duration: 382ms
+2026-02-23 07:38:55,784 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/entity/Role.java
+2026-02-23 07:38:55,990 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/entity/Role.java
+2026-02-23 07:38:56,164 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:56,344 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:56,581 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:56,745 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:56,917 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/UserRepository.java
+2026-02-23 07:38:57,171 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 96ms
+2026-02-23 07:38:57,647 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: backend/neurofleetx/src/main/java/com/neurofleetx/repository/UserRepository.java, Duration: 288ms
+2026-02-23 07:38:57,820 - Knowledge - INFO - persist search terms embedding for backend/neurofleetx/src/main/java/com/neurofleetx/repository/UserRepository.java
+2026-02-23 07:38:58,029 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/backend/neurofleetx/src/main/java/com/neurofleetx/repository/UserRepository.java
+2026-02-23 07:38:58,197 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:58,375 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:58,690 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:38:58,847 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:38:59,019 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/EngineDetails.jsx
+2026-02-23 07:38:59,289 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 118ms
+2026-02-23 07:38:59,727 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: frontend/src/pages/driver/EngineDetails.jsx, Duration: 271ms
+2026-02-23 07:38:59,937 - Knowledge - INFO - persist search terms embedding for frontend/src/pages/driver/EngineDetails.jsx
+2026-02-23 07:39:00,105 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/frontend/src/pages/driver/EngineDetails.jsx
+2026-02-23 07:39:00,318 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:39:00,527 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:39:00,817 - Knowledge - INFO - Found code-base-name: https://github.com/DarssiniRamesh/NeuroFleetX.git:kavia-main-7485
+2026-02-23 07:39:00,996 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fbdff342b50>
+2026-02-23 07:39:01,177 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/Springboot Exercise/_/pom.xml
+2026-02-23 07:39:01,478 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 128ms
+2026-02-23 07:39:01,899 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: Springboot Exercise/_/pom.xml, Duration: 269ms
+2026-02-23 07:39:02,093 - Knowledge - INFO - persist search terms embedding for Springboot Exercise/_/pom.xml
+2026-02-23 07:39:02,264 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/325290/b8330ke/NeuroFleetX/Springboot Exercise/_/pom.xml
+2026-02-23 07:39:02,446 - Knowledge - INFO - Loaded 110 files from persisted knowledge
+2026-02-23 07:39:02,604 - Knowledge - INFO - load persisted knowledge: end
+2026-02-23 07:39:02,798 - Knowledge - INFO - Redis support added with prefix knowledge:b8330ke:
+2026-02-23 07:39:03,246 - Knowledge - INFO - Starting knowledge initialization for ID: ARFOty-b8330ke
+2026-02-23 07:39:03,462 - Knowledge - INFO - 🔍 Checking Redis for build_id: b8330ke
+2026-02-23 07:39:03,617 - Knowledge - INFO - 🔍 Full session ID: ARFOty-b8330ke
+2026-02-23 07:39:03,794 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b8330ke:
+2026-02-23 07:39:03,996 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2026-02-23 07:39:04,200 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2026-02-23 07:39:04,380 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b8330ke
+2026-02-23 07:39:04,544 - Knowledge - INFO - ✅ Redis cache found! Loading knowledge...
+2026-02-23 07:39:04,697 - Knowledge - INFO - ✅ Successfully loaded from Redis: 110 files
+2026-02-23 07:39:04,877 - Knowledge - INFO - ✅ Redis load complete: 110 files in 0.88s
+2026-02-23 07:39:05,041 - Knowledge - INFO - ⚡ Total Redis path: 0.88s (vs ~300s from disk)
+2026-02-23 07:39:05,227 - Knowledge - INFO - Saving knowledge to Redis...
+2026-02-23 07:39:05,499 - Knowledge - INFO - Knowledge saved to Redis successfully
