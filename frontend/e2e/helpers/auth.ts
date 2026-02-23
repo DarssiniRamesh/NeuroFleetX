@@ -7,6 +7,19 @@ function uniqueEmail(prefix: string): string {
   return `${prefix}.${stamp}@example.com`;
 }
 
+function pathToLooseUrlRegex(expectedPath: string): RegExp {
+  // We only need to validate that the browser is "at" the expected route.
+  // In SPAs, the final URL may legitimately include:
+  // - an optional trailing slash
+  // - a query string
+  // - a hash
+  //
+  // Using a strict `$` anchor without allowing these can cause waitForURL to
+  // time out even when the UI is already on the correct page.
+  const escapedPath = expectedPath.replaceAll('/', '\\/');
+  return new RegExp(`${escapedPath}(?:/)?(?:[?#].*)?$`);
+}
+
 /**
  * PUBLIC_INTERFACE
  */
@@ -27,13 +40,14 @@ export async function registerViaUI(page: Page, opts: { role: Role; name?: strin
   await page.getByTestId('register-role').selectOption(opts.role);
 
   // Make post-submit navigation deterministic: wait for the URL change explicitly.
-  // IMPORTANT: Do not wait for the full "load" event: SPAs may keep long-lived connections open,
-  // and Playwright's default waitUntil="load" can become flaky even after URL change.
+  //
+  // Important notes:
+  // - This app is an SPA, so route changes may not trigger a document navigation
+  //   lifecycle (load/domcontentloaded). Therefore we do NOT tie waitForURL to a
+  //   lifecycle event; we only wait for the URL match.
+  // - We keep an explicit timeout here to avoid relying on global defaults.
   await Promise.all([
-    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\\\\\/')}$`), {
-      timeout: 30_000,
-      waitUntil: 'domcontentloaded',
-    }),
+    page.waitForURL(pathToLooseUrlRegex(expectedPath), { timeout: 30_000 }),
     page.getByTestId('register-submit').click(),
   ]);
 
@@ -61,10 +75,7 @@ export async function loginViaUI(page: Page, opts: { email: string; password: st
   await page.getByTestId('login-password').fill(opts.password);
 
   await Promise.all([
-    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\\\\\/')}$`), {
-      timeout: 30_000,
-      waitUntil: 'domcontentloaded',
-    }),
+    page.waitForURL(pathToLooseUrlRegex(expectedPath), { timeout: 30_000 }),
     page.getByTestId('login-submit').click(),
   ]);
 
