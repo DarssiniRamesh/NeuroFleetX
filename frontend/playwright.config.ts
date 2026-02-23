@@ -19,6 +19,19 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 2 : undefined,
 
+  /**
+   * Global timeouts (determinism / no hangs):
+   * - timeout: per-test maximum runtime.
+   * - expect.timeout: default expect() timeout (can still be overridden per expect).
+   *
+   * Keep these reasonably strict so we fail fast when the app is stuck, but allow
+   * enough time for CI startup and first navigation.
+   */
+  timeout: process.env.CI ? 90_000 : 60_000,
+  expect: {
+    timeout: process.env.CI ? 15_000 : 10_000,
+  },
+
   // In CI, emit a single-file HTML report for easy artifact upload.
   reporter: process.env.CI
     ? [['github'], ['html', { open: 'never', outputFolder: 'playwright-report' }]]
@@ -31,6 +44,15 @@ export default defineConfig({
 
   use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+
+    /**
+     * Avoid indefinite waiting on actions/navigation:
+     * - actionTimeout applies to click/fill/etc.
+     * - navigationTimeout applies to goto/waitForURL/etc.
+     */
+    actionTimeout: process.env.CI ? 15_000 : 10_000,
+    navigationTimeout: process.env.CI ? 30_000 : 20_000,
+
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',

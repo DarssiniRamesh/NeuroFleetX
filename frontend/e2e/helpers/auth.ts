@@ -18,18 +18,25 @@ export async function registerViaUI(page: Page, opts: { role: Role; name?: strin
 
   const expectedPath = opts.role === 'ADMIN' ? '/admin/dashboard' : '/driver/dashboard';
 
-  await page.goto('/register');
+  await page.goto('/register', { waitUntil: 'domcontentloaded' });
   await expect(page.getByTestId('auth-register-title')).toBeVisible();
 
   await page.getByTestId('register-name').fill(name);
   await page.getByTestId('register-email').fill(email);
   await page.getByTestId('register-password').fill(password);
   await page.getByTestId('register-role').selectOption(opts.role);
-  await page.getByTestId('register-submit').click();
 
-  // Post-register, the app should route to role dashboard.
-  // Waiting on URL is typically more robust than only waiting on a single element.
-  await expect(page).toHaveURL(new RegExp(`${expectedPath.replaceAll('/', '\\/')}$`), { timeout: 20_000 });
+  // Make post-submit navigation deterministic: wait for the URL change explicitly.
+  await Promise.all([
+    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\/')}$`), { timeout: 30_000 }),
+    page.getByTestId('register-submit').click(),
+  ]);
+
+  // Optional: wait for network to settle, but do not hang if the app keeps long-lived connections open.
+  await page.waitForLoadState('networkidle', { timeout: 15_000 }).catch(() => {
+    // Intentionally ignore; we rely on UI assertions below for determinism.
+  });
+
   await expect(page.getByTestId('dashboard-layout')).toBeVisible({ timeout: 20_000 });
 
   return { email, password, name, role: opts.role };
@@ -42,14 +49,21 @@ export async function loginViaUI(page: Page, opts: { email: string; password: st
   /** Log in via UI and verify we land in the correct role dashboard. */
   const expectedPath = opts.role === 'ADMIN' ? '/admin/dashboard' : '/driver/dashboard';
 
-  await page.goto('/login');
+  await page.goto('/login', { waitUntil: 'domcontentloaded' });
   await expect(page.getByTestId('auth-login-title')).toBeVisible();
 
   await page.getByTestId('login-email').fill(opts.email);
   await page.getByTestId('login-password').fill(opts.password);
-  await page.getByTestId('login-submit').click();
 
-  await expect(page).toHaveURL(new RegExp(`${expectedPath.replaceAll('/', '\\/')}$`), { timeout: 20_000 });
+  await Promise.all([
+    page.waitForURL(new RegExp(`${expectedPath.replaceAll('/', '\\\\/')}$`), { timeout: 30_000 }),
+    page.getByTestId('login-submit').click(),
+  ]);
+
+  await page.waitForLoadState('networkidle', { timeout: 15_000 }).catch(() => {
+    // Intentionally ignore; we rely on UI assertions below for determinism.
+  });
+
   await expect(page.getByTestId('dashboard-layout')).toBeVisible({ timeout: 20_000 });
   await expect(page.getByTestId('sidebar')).toBeVisible({ timeout: 20_000 });
 
