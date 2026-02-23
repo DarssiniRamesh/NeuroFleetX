@@ -95,20 +95,24 @@ const PredictiveMaintenance = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Predictive Maintenance</h1>
+    <div data-testid="admin-predictive-page">
+      <h1 className="text-3xl font-bold" data-testid="admin-predictive-title">Predictive Maintenance</h1>
       <p className="mt-2 text-muted-foreground">
         Monitor vehicle health and maintenance alerts.
       </p>
 
       {loading ? (
-        <p className="mt-6 text-muted-foreground">Loading…</p>
+        <p className="mt-6 text-muted-foreground" data-testid="predictive-loading">Loading…</p>
       ) : (
-        <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3"
+          data-testid="predictive-vehicle-grid"
+        >
           {enrichedVehicles.map((v) => (
             <div
               key={v.id}
               className="p-6 rounded-xl border border-border/40 bg-card shadow-sm"
+              data-testid="predictive-vehicle-card"
             >
               <h2 className="text-xl font-semibold text-primary">{v.number}</h2>
               <p className="text-muted-foreground">Model: {v.model}</p>
@@ -118,6 +122,7 @@ const PredictiveMaintenance = () => {
                 Health{" "}
                 <span
                   className={`px-2 py-1 rounded font-medium text-sm ${v.healthColor}`}
+                  data-testid="predictive-health-badge"
                 >
                   {v.health}% — {v.healthStatus}
                 </span>
@@ -133,6 +138,7 @@ const PredictiveMaintenance = () => {
                   onClick={() => updateHealthLocally(v.id, +10)}
                   disabled={v.health >= 100}
                   type="button"
+                  data-testid="predictive-health-inc"
                 >
                   +10
                 </button>
@@ -141,6 +147,7 @@ const PredictiveMaintenance = () => {
                   onClick={() => updateHealthLocally(v.id, -10)}
                   disabled={v.health <= 0}
                   type="button"
+                  data-testid="predictive-health-dec"
                 >
                   -10
                 </button>
@@ -149,7 +156,7 @@ const PredictiveMaintenance = () => {
           ))}
 
           {enrichedVehicles.length === 0 && (
-            <p className="mt-6 text-center text-muted-foreground col-span-full">
+            <p className="mt-6 text-center text-muted-foreground col-span-full" data-testid="predictive-empty">
               No vehicles found.
             </p>
           )}

@@ -9,7 +9,7 @@ export default function DriverManagement() {
   ]);
 
   return (
-    <div>
+    <div data-testid="admin-drivers-page">
       <h2 className="mb-4 text-xl font-semibold">Driver Management</h2>
       <div className="grid gap-4">
         {drivers.map(d => (

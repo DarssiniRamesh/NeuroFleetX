@@ -29,13 +29,13 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4">
+    <div className="flex items-center justify-center min-h-screen p-4" data-testid="auth-login-page">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-center">Welcome back</CardTitle>
+          <CardTitle className="text-center" data-testid="auth-login-title">Welcome back</CardTitle>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4" onSubmit={onSubmit}>
+          <form className="space-y-4" onSubmit={onSubmit} data-testid="login-form">
             <input
               name="email"
               placeholder="Email"
@@ -43,6 +43,8 @@ export default function Login() {
               onChange={onChange}
               className="w-full p-3 border rounded-md bg-background border-border/10"
               required
+              data-testid="login-email"
+              autoComplete="username"
             />
             <input
               name="password"
@@ -52,14 +54,19 @@ export default function Login() {
               onChange={onChange}
               className="w-full p-3 border rounded-md bg-background border-border/10"
               required
+              data-testid="login-password"
+              autoComplete="current-password"
             />
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button type="submit" className="w-full" disabled={loading} data-testid="login-submit">
               {loading ? "Signing in..." : "Sign in"}
             </Button>
           </form>
 
           <p className="mt-4 text-sm text-center text-muted-foreground">
-            New? <a href="/register" className="underline text-primary">Create an account</a>
+            New?{" "}
+            <a href="/register" className="underline text-primary" data-testid="login-to-register">
+              Create an account
+            </a>
           </p>
         </CardContent>
       </Card>

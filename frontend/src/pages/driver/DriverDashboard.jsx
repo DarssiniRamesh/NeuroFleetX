@@ -63,8 +63,8 @@ export default function DriverDashboard() {
   const COLORS = ["#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe"];
 
   return (
-    <div>
-      <h1 className="text-4xl font-bold">Welcome, {driverName}</h1>
+    <div data-testid="driver-dashboard">
+      <h1 className="text-4xl font-bold" data-testid="driver-dashboard-title">Welcome, {driverName}</h1>
       <p className="mt-2 text-muted-foreground">
         Here's your overview for today: bookings, routes, and vehicle health.
       </p>

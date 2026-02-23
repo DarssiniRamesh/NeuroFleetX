@@ -48,13 +48,13 @@ export default function Register() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4">
+    <div className="flex items-center justify-center min-h-screen p-4" data-testid="auth-register-page">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-center">Create account</CardTitle>
+          <CardTitle className="text-center" data-testid="auth-register-title">Create account</CardTitle>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4" onSubmit={onSubmit}>
+          <form className="space-y-4" onSubmit={onSubmit} data-testid="register-form">
             <input
               name="name"
               placeholder="Full name"
@@ -62,6 +62,8 @@ export default function Register() {
               onChange={onChange}
               className="w-full p-3 border rounded-md bg-background border-border/10"
               required
+              data-testid="register-name"
+              autoComplete="name"
             />
             <input
               name="email"
@@ -70,6 +72,8 @@ export default function Register() {
               onChange={onChange}
               className="w-full p-3 border rounded-md bg-background border-border/10"
               required
+              data-testid="register-email"
+              autoComplete="email"
             />
             <input
               name="password"
@@ -79,6 +83,8 @@ export default function Register() {
               onChange={onChange}
               className="w-full p-3 border rounded-md bg-background border-border/10"
               required
+              data-testid="register-password"
+              autoComplete="new-password"
             />
 
             <select
@@ -86,18 +92,22 @@ export default function Register() {
               value={form.role}
               onChange={onChange}
               className="w-full p-3 border rounded-md bg-background border-border/10"
+              data-testid="register-role"
             >
               <option value="ADMIN">Admin</option>
               <option value="DRIVER">Driver</option>
             </select>
 
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button type="submit" className="w-full" disabled={loading} data-testid="register-submit">
               {loading ? "Registering..." : "Register"}
             </Button>
           </form>
 
           <p className="mt-4 text-sm text-center text-muted-foreground">
-            Already registered? <a href="/login" className="underline text-primary">Login</a>
+            Already registered?{" "}
+            <a href="/login" className="underline text-primary" data-testid="register-to-login">
+              Login
+            </a>
           </p>
         </CardContent>
       </Card>

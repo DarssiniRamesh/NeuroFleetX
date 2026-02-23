@@ -24,11 +24,11 @@ export default function FleetManagement() {
   }, []);
 
   return (
-    <div>
-      <h2 className="mb-4 text-xl font-semibold">Fleet Management</h2>
-      <div className="grid gap-4">
-        {vehicles.map(v => (
-          <Card key={v.id}>
+    <div data-testid="admin-fleet-page">
+      <h2 className="mb-4 text-xl font-semibold" data-testid="admin-fleet-title">Fleet Management</h2>
+      <div className="grid gap-4" data-testid="admin-fleet-vehicle-list">
+        {vehicles.map((v) => (
+          <Card key={v.id} data-testid="admin-fleet-vehicle-card">
             <CardHeader>
               <CardTitle>{v.vehicleNo} — {v.model}</CardTitle>
             </CardHeader>

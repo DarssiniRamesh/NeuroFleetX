@@ -22,8 +22,8 @@ export default function AdminDashboard() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-      <Card>
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3" data-testid="admin-dashboard">
+      <Card data-testid="admin-stats-vehicles">
         <CardHeader>
           <CardTitle>Vehicles</CardTitle>
         </CardHeader>
@@ -33,7 +33,7 @@ export default function AdminDashboard() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card data-testid="admin-stats-drivers">
         <CardHeader>
           <CardTitle>Drivers</CardTitle>
         </CardHeader>
@@ -43,7 +43,7 @@ export default function AdminDashboard() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card data-testid="admin-stats-active-rides">
         <CardHeader>
           <CardTitle>Active Rides</CardTitle>
         </CardHeader>

@@ -24,11 +24,11 @@ export default function DashboardLayout({ role = "ADMIN" }) {
   };
 
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="flex min-h-screen bg-background" data-testid="dashboard-layout">
       <Sidebar role={role} footerUser={user} />
       <div className="flex flex-col flex-1">
         <Topbar user={user} onLogout={handleLogout} />
-        <main className="p-6">
+        <main className="p-6" data-testid="dashboard-main">
           <Outlet />
         </main>
       </div>

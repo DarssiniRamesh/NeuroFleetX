@@ -73,17 +73,18 @@ export default function DriverBookings() {
   };
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Customer Bookings</h1>
+    <div data-testid="driver-bookings-page">
+      <h1 className="text-3xl font-bold" data-testid="driver-bookings-title">Customer Bookings</h1>
       <p className="mt-2 text-muted-foreground">
         Manage your assigned bookings and see AI suggestions.
       </p>
 
-      <div className="flex flex-wrap gap-4 mt-6">
+      <div className="flex flex-wrap gap-4 mt-6" data-testid="bookings-actions">
         <button
           onClick={generateRecommendation}
           className="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
           type="button"
+          data-testid="bookings-generate-recommendation"
         >
           Generate Smart Recommendation
         </button>
@@ -92,6 +93,7 @@ export default function DriverBookings() {
           onClick={() => setShowForm(true)}
           className="px-4 py-2 text-white bg-green-600 rounded hover:bg-green-700"
           type="button"
+          data-testid="bookings-add-booking"
         >
           + Add Booking
         </button>
@@ -103,16 +105,16 @@ export default function DriverBookings() {
       </div>
 
       {recommendation && (
-        <p className="mt-3 p-2 bg-card rounded border border-border/40">
+        <p className="mt-3 p-2 bg-card rounded border border-border/40" data-testid="bookings-recommendation">
           {recommendation}
         </p>
       )}
 
       {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" data-testid="booking-modal">
           <div className="p-6 bg-card rounded-xl w-96 border border-border/40">
             <h2 className="mb-4 text-xl font-semibold">New Booking</h2>
-            <form onSubmit={handleAddBooking} className="space-y-3">
+            <form onSubmit={handleAddBooking} className="space-y-3" data-testid="booking-form">
               <input
                 type="text"
                 name="customerName"
@@ -121,6 +123,7 @@ export default function DriverBookings() {
                 onChange={handleChange}
                 required
                 className="w-full p-2 border rounded bg-background border-border/40"
+                data-testid="booking-form-customerName"
               />
               <input
                 type="text"
@@ -130,6 +133,7 @@ export default function DriverBookings() {
                 onChange={handleChange}
                 required
                 className="w-full p-2 border rounded bg-background border-border/40"
+                data-testid="booking-form-pickup"
               />
               <input
                 type="text"
@@ -139,12 +143,14 @@ export default function DriverBookings() {
                 onChange={handleChange}
                 required
                 className="w-full p-2 border rounded bg-background border-border/40"
+                data-testid="booking-form-drop"
               />
 
               <div className="flex gap-2 mt-2">
                 <button
                   type="submit"
                   className="flex-1 p-2 font-semibold text-white bg-green-600 rounded hover:bg-green-700"
+                  data-testid="booking-form-submit"
                 >
                   Add
                 </button>
@@ -152,6 +158,7 @@ export default function DriverBookings() {
                   type="button"
                   onClick={() => setShowForm(false)}
                   className="flex-1 p-2 font-semibold text-white bg-gray-700 rounded hover:bg-gray-600"
+                  data-testid="booking-form-cancel"
                 >
                   Cancel
                 </button>
@@ -161,7 +168,7 @@ export default function DriverBookings() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 gap-4 mt-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 mt-6 md:grid-cols-2" data-testid="bookings-list">
         {bookings.length === 0 && (
           <p className="text-muted-foreground">No bookings assigned yet.</p>
         )}
@@ -170,6 +177,7 @@ export default function DriverBookings() {
           <div
             key={b.id}
             className="p-4 rounded-xl border border-border/40 bg-card"
+            data-testid="booking-card"
           >
             <h2 className="text-xl text-primary">Booking {b.id}</h2>
             <p className="text-muted-foreground">Customer: {b.customerName}</p>
@@ -185,6 +193,7 @@ export default function DriverBookings() {
                     ? "text-yellow-600"
                     : "text-red-600"
                 }
+                data-testid="booking-status"
               >
                 {b.status}
               </span>
@@ -194,6 +203,7 @@ export default function DriverBookings() {
               onClick={() => completeBooking(b.id)}
               disabled={b.status === "Completed"}
               type="button"
+              data-testid="booking-mark-completed"
             >
               Mark Completed
             </button>
