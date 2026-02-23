@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS users (
   email TEXT UNIQUE,
   password TEXT,
   role TEXT,    -- ADMIN / DRIVER
+  avatar TEXT,  -- Optional profile image URL/path
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
