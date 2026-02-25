@@ -24,35 +24,52 @@ const DriverEngine = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Vehicle Engine & Telemetry</h1>
-      <p className="mt-2 text-muted-foreground">
+    <div data-testid="driver-engine-page">
+      <h1 className="text-3xl font-bold" data-testid="driver-engine-title">
+        Vehicle Engine & Telemetry
+      </h1>
+      <p className="mt-2 text-muted-foreground" data-testid="driver-engine-subtitle">
         Monitor your assigned vehicle in real-time.
       </p>
 
       {vehicle ? (
-        <div className="mt-6 p-6 rounded-xl border border-border/40 bg-card">
-          <h2 className="text-2xl text-primary">{vehicle.number}</h2>
-          <p className="text-muted-foreground">Model: {vehicle.model}</p>
-          <p className="text-muted-foreground">Type: {vehicle.type}</p>
-          <p className="text-muted-foreground">Health: {vehicle.health}%</p>
-          <p className="text-muted-foreground">
+        <div
+          className="mt-6 p-6 rounded-xl border border-border/40 bg-card"
+          data-testid="driver-engine-card"
+        >
+          <h2 className="text-2xl text-primary" data-testid="driver-engine-vehicle-number">
+            {vehicle.number}
+          </h2>
+          <p className="text-muted-foreground" data-testid="driver-engine-vehicle-model">
+            Model: {vehicle.model}
+          </p>
+          <p className="text-muted-foreground" data-testid="driver-engine-vehicle-type">
+            Type: {vehicle.type}
+          </p>
+          <p className="text-muted-foreground" data-testid="driver-engine-vehicle-health">
+            Health: {vehicle.health}%
+          </p>
+          <p className="text-muted-foreground" data-testid="driver-engine-vehicle-status">
             Engine Status: {vehicle.engineStatus}
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground" data-testid="driver-engine-vehicle-last-telemetry">
             Last Telemetry:{" "}
             {vehicle.lastTelemetry
               ? new Date(vehicle.lastTelemetry).toLocaleString()
               : "N/A"}
           </p>
 
-          <p className="text-muted-foreground">Speed: {vehicle.speed || 0} km/h</p>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground" data-testid="driver-engine-vehicle-speed">
+            Speed: {vehicle.speed || 0} km/h
+          </p>
+          <p className="text-muted-foreground" data-testid="driver-engine-vehicle-location">
             Location: {vehicle.location || "N/A"}
           </p>
         </div>
       ) : (
-        <p className="mt-6 text-muted-foreground">No vehicle assigned yet.</p>
+        <p className="mt-6 text-muted-foreground" data-testid="driver-engine-empty">
+          No vehicle assigned yet.
+        </p>
       )}
     </div>
   );
