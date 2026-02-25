@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+const { defineConfig, devices } = require('@playwright/test');
 
 // Reuse the same env variables and behavior as the main Playwright config.
 const BACKEND_PORT = Number(process.env.PLAYWRIGHT_BACKEND_PORT || 3001);
@@ -6,17 +6,18 @@ const FRONTEND_PORT = Number(process.env.PLAYWRIGHT_FRONTEND_PORT || 3000);
 const HOST = '127.0.0.1';
 
 /**
- * Playwright configuration used specifically for Cucumber/BDD runs.
+ * Cucumber/Playwright configuration used specifically for BDD runs.
  *
- * This is intentionally very close to `playwright.config.ts` but:
- * - testDir points at the compiled Cucumber step definitions (dist/e2e/bdd)
- * - webServer, baseURL, and Chromium settings mirror the main config
+ * This mirrors the previous TypeScript-based `cucumber.config.ts` so that:
+ * - webServer spins up the Spring Boot backend and Vite frontend
+ * - baseURL and timeouts match the main Playwright config
+ * - Chromium is used as the browser with optional executable override
  *
- * Cucumber will:
+ * The Cucumber CLI will still:
  * - read `.feature` files from `e2e/bdd/features`
- * - execute Playwright step definitions compiled into `dist/e2e/bdd`
+ * - execute Playwright step definitions from the required step/support files
  */
-export default defineConfig({
+module.exports = defineConfig({
   testDir: './dist/e2e/bdd',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -93,7 +94,8 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         launchOptions: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
           ? {
-              executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
+              executablePath:
+                process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
             }
           : undefined,
       },
