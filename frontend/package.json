@@ -13,7 +13,9 @@
     "preview": "vite preview",
     "test:e2e": "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 playwright test && node ./scripts/zip-playwright-report.mjs",
     "test:e2e:ui": "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 playwright test --ui",
-    "test:e2e:report": "playwright show-report playwright-report"
+    "test:e2e:report": "playwright show-report playwright-report",
+    "test:bdd": "cucumber-js --require-module ts-node/register --require e2e/bdd/steps/**/*.ts --require e2e/bdd/support/**/*.ts --config cucumber.config.ts",
+    "test:bdd:admin-fleet": "npm run test:bdd -- --tags '@admin-fleet'"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.8",
