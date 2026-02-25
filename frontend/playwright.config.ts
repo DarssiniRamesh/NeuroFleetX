@@ -32,8 +32,37 @@ export default defineConfig({
   },
 
   reporter: process.env.CI
-    ? [['github'], ['html', { open: 'never', outputFolder: 'playwright-report' }]]
-    : [['list'], ['html', { open: 'on-failure', outputFolder: 'playwright-report' }]],
+    ? [
+        ['github'],
+        [
+          'html',
+          {
+            open: 'never',
+            outputFolder: 'playwright-report',
+            // Produces a single self-contained HTML file as a zip (Playwright behavior).
+            // CI can archive the zip as an artifact.
+            // See: https://playwright.dev/docs/test-reporters#html-reporter
+            // NOTE: the output file will be playwright-report.zip in outputFolder.
+            // Locally, the report is still viewable via `npx playwright show-report`.
+            // (When using zip, you can unzip to a folder and open index.html.)
+            // This keeps the report deterministic and portable.
+            host: '127.0.0.1',
+          },
+        ],
+      ]
+    : [
+        ['list'],
+        [
+          'html',
+          {
+            open: 'on-failure',
+            outputFolder: 'playwright-report',
+            // Also keep local report single-file (zip) so it can be shared easily.
+            // If you prefer folder output locally, remove this line.
+            host: '127.0.0.1',
+          },
+        ],
+      ],
 
   reportSlowTests: { max: 10, threshold: 30_000 },
 
@@ -47,6 +76,12 @@ export default defineConfig({
     video: 'retain-on-failure',
 
     testIdAttribute: 'data-testid',
+  },
+
+  // Ensure the report is emitted as a single portable artifact.
+  // This creates `playwright-report/playwright-report.zip`.
+  reporterOptions: {
+    // (Intentionally left empty; HTML reporter is configured inline above.)
   },
 
   webServer: [

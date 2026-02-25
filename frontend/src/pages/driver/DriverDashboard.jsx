@@ -69,23 +69,23 @@ export default function DriverDashboard() {
         Here's your overview for today: bookings, routes, and vehicle health.
       </p>
 
-      <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-4">
-        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+      <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-4" data-testid="driver-dashboard-stats">
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm" data-testid="driver-stats-upcoming-bookings">
           <h2 className="text-lg text-muted-foreground">Upcoming Bookings</h2>
           <p className="text-3xl font-bold">{pieData[0].value}</p>
         </div>
 
-        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm" data-testid="driver-stats-engine-status">
           <h2 className="text-lg text-muted-foreground">Engine Status</h2>
           <p className="text-3xl font-bold">{engineStatus}</p>
         </div>
 
-        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm" data-testid="driver-stats-completed-trips">
           <h2 className="text-lg text-muted-foreground">Completed Trips</h2>
           <p className="text-3xl font-bold">{pieData[1].value}</p>
         </div>
 
-        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm">
+        <div className="bg-card p-6 rounded-xl border border-border/40 shadow-sm" data-testid="driver-stats-current-booking">
           <h2 className="text-lg text-muted-foreground">Current Booking</h2>
           <p className="text-3xl font-bold">
             {currentBooking ? currentBooking.customerName : "None"}

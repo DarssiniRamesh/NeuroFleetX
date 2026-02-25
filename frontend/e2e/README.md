@@ -17,6 +17,23 @@ npm run test:e2e:install
 npm run test:e2e
 ```
 
+## HTML report (single-file artifact)
+
+The Playwright HTML report is generated as a **single portable file**:
+
+- `NeuroFleetX/frontend/playwright-report/playwright-report.zip`
+
+To view it locally:
+
+```bash
+# Option A: Use Playwright helper
+npm run test:e2e:report
+
+# Option B: Unzip and open in a browser
+unzip -o playwright-report/playwright-report.zip -d playwright-report-unzipped
+# then open playwright-report-unzipped/index.html
+```
+
 ## Notes
 
 - Tests rely on stable `data-testid` attributes added across key flows (login/register, navigation, key pages).

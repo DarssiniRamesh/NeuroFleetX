@@ -98,9 +98,15 @@ export default function DriverBookings() {
           + Add Booking
         </button>
 
-        <div className="ml-auto text-sm text-muted-foreground self-center">
-          Pending: <span className="font-semibold">{stats.pending}</span> · Completed:{" "}
-          <span className="font-semibold">{stats.completed}</span>
+        <div className="ml-auto text-sm text-muted-foreground self-center" data-testid="bookings-stats">
+          Pending:{" "}
+          <span className="font-semibold" data-testid="bookings-stats-pending">
+            {stats.pending}
+          </span>{" "}
+          · Completed:{" "}
+          <span className="font-semibold" data-testid="bookings-stats-completed">
+            {stats.completed}
+          </span>
         </div>
       </div>
 
