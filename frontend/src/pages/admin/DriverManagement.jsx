@@ -10,15 +10,17 @@ export default function DriverManagement() {
 
   return (
     <div data-testid="admin-drivers-page">
-      <h2 className="mb-4 text-xl font-semibold">Driver Management</h2>
-      <div className="grid gap-4">
-        {drivers.map(d => (
-          <Card key={d.id}>
+      <h2 className="mb-4 text-xl font-semibold" data-testid="admin-drivers-title">
+        Driver Management
+      </h2>
+      <div className="grid gap-4" data-testid="admin-drivers-list">
+        {drivers.map((d) => (
+          <Card key={d.id} data-testid="admin-driver-card">
             <CardHeader>
-              <CardTitle>{d.name}</CardTitle>
+              <CardTitle data-testid="admin-driver-name">{d.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <div>Phone: {d.phone}</div>
+              <div data-testid="admin-driver-phone">Phone: {d.phone}</div>
             </CardContent>
           </Card>
         ))}
