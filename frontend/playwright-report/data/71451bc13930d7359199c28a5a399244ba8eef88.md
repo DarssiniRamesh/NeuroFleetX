@@ -1,0 +1,60 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - heading "NeuroFleetX" [level=2] [ref=e7]
+        - paragraph [ref=e8]: Admin Console
+      - navigation [ref=e9]:
+        - link "Dashboard" [ref=e10] [cursor=pointer]:
+          - /url: /admin/dashboard
+          - img [ref=e12]
+          - generic [ref=e15]: Dashboard
+        - link "Fleet Management" [ref=e16] [cursor=pointer]:
+          - /url: /admin/fleet
+          - img [ref=e18]
+          - generic [ref=e23]: Fleet Management
+        - link "AI Route" [ref=e24] [cursor=pointer]:
+          - /url: /admin/route
+          - img [ref=e26]
+          - generic [ref=e30]: AI Route
+        - link "Predictive Maintenance" [ref=e31] [cursor=pointer]:
+          - /url: /admin/predictive
+          - img [ref=e33]
+          - generic [ref=e35]: Predictive Maintenance
+        - link "Driver Management" [ref=e36] [cursor=pointer]:
+          - /url: /admin/drivers
+          - img [ref=e38]
+          - generic [ref=e43]: Driver Management
+    - generic [ref=e45]:
+      - generic [ref=e46]: "N"
+      - generic [ref=e47]:
+        - generic [ref=e48]: E2E Admin
+        - generic [ref=e49]: ADMIN
+  - generic [ref=e50]:
+    - banner [ref=e51]:
+      - generic [ref=e52]:
+        - heading "NeuroFleetX" [level=1] [ref=e53]
+        - generic [ref=e54]: Urban Mobility
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: E2E Admin
+            - generic [ref=e59]: ADMIN
+          - img [ref=e61]
+        - button "Logout" [ref=e64] [cursor=pointer]
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - heading "AI Route (OpenRouteService)" [level=2] [ref=e67]
+        - generic [ref=e68]:
+          - generic [ref=e70]: Quick Route
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - textbox "start lat" [ref=e73]: "28.6139"
+              - textbox "start lng" [ref=e74]: "77.2090"
+              - textbox "end lat" [ref=e75]: "28.7041"
+              - textbox "end lng" [ref=e76]: "77.1025"
+            - button "Optimize" [active] [ref=e77] [cursor=pointer]
+```

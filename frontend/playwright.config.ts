@@ -39,14 +39,10 @@ export default defineConfig({
           {
             open: 'never',
             outputFolder: 'playwright-report',
-            // Produces a single self-contained HTML file as a zip (Playwright behavior).
-            // CI can archive the zip as an artifact.
-            // See: https://playwright.dev/docs/test-reporters#html-reporter
-            // NOTE: the output file will be playwright-report.zip in outputFolder.
-            // Locally, the report is still viewable via `npx playwright show-report`.
-            // (When using zip, you can unzip to a folder and open index.html.)
-            // This keeps the report deterministic and portable.
-            host: '127.0.0.1',
+            // Ensure CI produces a single portable artifact:
+            // Playwright will generate `playwright-report.zip` in the repo root (next to outputFolder),
+            // which CI can upload as one artifact.
+            zip: true,
           },
         ],
       ]
@@ -57,9 +53,8 @@ export default defineConfig({
           {
             open: 'on-failure',
             outputFolder: 'playwright-report',
-            // Also keep local report single-file (zip) so it can be shared easily.
-            // If you prefer folder output locally, remove this line.
-            host: '127.0.0.1',
+            // Keep local runs portable too (single .zip file).
+            zip: true,
           },
         ],
       ],

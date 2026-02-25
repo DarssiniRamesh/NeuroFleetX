@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/route")
-@CrossOrigin("*")
 @RequiredArgsConstructor
 public class RouteController {
 
